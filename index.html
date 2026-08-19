@@ -10,10 +10,6 @@
 
     <style>
 
-        /* =========================================
-           RESET
-        ========================================= */
-
         * {
             margin: 0;
             padding: 0;
@@ -32,33 +28,23 @@
             color: #202a2e;
         }
 
-
-        /* =========================================
-           CONTAINER
-        ========================================= */
-
         .container {
             width: 100%;
             max-width: 500px;
             min-height: 100vh;
-
             margin: 0 auto;
-
             background: #ffffff;
-
             overflow: hidden;
         }
 
 
-        /* =========================================
+        /* =========================
            HEADER
-        ========================================= */
+        ========================= */
 
         .hero {
             position: relative;
-
             height: 215px;
-
             padding-top: 18px;
 
             display: flex;
@@ -66,7 +52,6 @@
             align-items: center;
 
             text-align: center;
-
             overflow: hidden;
 
             background:
@@ -79,14 +64,8 @@
             background-size: 28px 28px;
         }
 
-
-        /* =========================================
-           DOTS
-        ========================================= */
-
         .dots {
             position: absolute;
-
             width: 90px;
             height: 90px;
 
@@ -112,13 +91,12 @@
         }
 
 
-        /* =========================================
-           DECORATIVE LEAF
-        ========================================= */
+        /* =========================
+           LEAF
+        ========================= */
 
         .leaf-decoration {
             position: absolute;
-
             left: -25px;
             bottom: -10px;
 
@@ -142,32 +120,25 @@
         .leaf-decoration span:nth-child(1) {
             left: 35px;
             bottom: 0;
-
             transform: rotate(-25deg);
         }
 
         .leaf-decoration span:nth-child(2) {
             left: 55px;
             bottom: 20px;
-
-            transform:
-                rotate(30deg)
-                scale(0.75);
+            transform: rotate(30deg) scale(.75);
         }
 
         .leaf-decoration span:nth-child(3) {
             left: 10px;
             bottom: 25px;
-
-            transform:
-                rotate(-55deg)
-                scale(0.65);
+            transform: rotate(-55deg) scale(.65);
         }
 
 
-        /* =========================================
+        /* =========================
            SHIELD
-        ========================================= */
+        ========================= */
 
         .shield-decoration {
             position: absolute;
@@ -178,7 +149,7 @@
             width: 48px;
             height: 58px;
 
-            opacity: 0.15;
+            opacity: .15;
 
             border: 4px solid #79b783;
 
@@ -199,20 +170,17 @@
 
         .shield-decoration span {
             color: #79b783;
-
             font-size: 25px;
-
             font-weight: 800;
         }
 
 
-        /* =========================================
-           EHS LOGO
-        ========================================= */
+        /* =========================
+           LOGO EHS
+        ========================= */
 
         .logo {
             position: relative;
-
             z-index: 2;
 
             width: 68px;
@@ -224,46 +192,35 @@
         .logo svg {
             width: 100%;
             height: 100%;
-
             display: block;
         }
 
 
-        /* =========================================
+        /* =========================
            EHS TITLE
-        ========================================= */
+        ========================= */
 
         .hero h1 {
             position: relative;
-
             z-index: 2;
 
             color: #087443;
 
             font-size: 43px;
-
             line-height: 1;
 
             font-weight: 800;
-
             letter-spacing: 1px;
 
             margin-top: 2px;
             margin-bottom: 3px;
         }
 
-
-        /* =========================================
-           SUBTITLE
-        ========================================= */
-
         .subtitle {
             position: relative;
-
             z-index: 2;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
@@ -272,10 +229,9 @@
             color: #087443;
 
             font-size: 7px;
-
             font-weight: 700;
 
-            letter-spacing: 0.4px;
+            letter-spacing: .4px;
         }
 
         .subtitle b {
@@ -283,13 +239,12 @@
         }
 
 
-        /* =========================================
+        /* =========================
            WELCOME
-        ========================================= */
+        ========================= */
 
         .welcome {
             text-align: center;
-
             padding: 20px 25px 18px;
         }
 
@@ -297,22 +252,20 @@
             color: #087443;
 
             font-size: 22px;
-
             line-height: 1.1;
 
             font-weight: 800;
         }
 
 
-        /* =========================================
+        /* =========================
            SAP
-        ========================================= */
+        ========================= */
 
         .divider {
             width: 100%;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
@@ -333,26 +286,18 @@
             color: #087443;
 
             font-size: 7px;
-
             line-height: 1.25;
 
             font-weight: 700;
 
             text-align: center;
-
             white-space: nowrap;
         }
-
-
-        /* =========================================
-           WELCOME TEXT
-        ========================================= */
 
         .welcome p {
             color: #303936;
 
             font-size: 9px;
-
             line-height: 1.45;
         }
 
@@ -369,13 +314,12 @@
         }
 
 
-        /* =========================================
+        /* =========================
            MENU
-        ========================================= */
+        ========================= */
 
         .menu {
             display: flex;
-
             flex-direction: column;
 
             gap: 7px;
@@ -383,26 +327,18 @@
             padding: 0 25px 27px;
         }
 
-
-        /* =========================================
-           MENU CARD
-        ========================================= */
-
         .menu-card {
             position: relative;
 
             display: flex;
-
             align-items: center;
 
             width: 100%;
-
             height: 72px;
 
             background: #ffffff;
 
             border: 1px solid #e5e7eb;
-
             border-radius: 11px;
 
             overflow: hidden;
@@ -412,9 +348,14 @@
             color: inherit;
 
             box-shadow:
-                0 3px 9px rgba(0, 0, 0, 0.07);
+                0 3px 9px rgba(0,0,0,.07);
+
+            -webkit-tap-highlight-color: transparent;
         }
 
+        .menu-card:active {
+            transform: scale(.99);
+        }
 
         .menu-card::before {
             content: "";
@@ -428,11 +369,6 @@
             width: 4px;
         }
 
-
-        /* =========================================
-           ICON BOX
-        ========================================= */
-
         .icon-box {
             width: 70px;
             min-width: 70px;
@@ -440,7 +376,6 @@
             height: 72px;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
@@ -448,9 +383,9 @@
         }
 
 
-        /* =========================================
+        /* =========================
            HAZARD
-        ========================================= */
+        ========================= */
 
         .hazard::before,
         .hazard .icon-box {
@@ -462,14 +397,12 @@
             height: 34px;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
             color: #ffffff;
 
             font-size: 25px;
-
             font-weight: 900;
 
             clip-path:
@@ -481,9 +414,9 @@
         }
 
 
-        /* =========================================
+        /* =========================
            IUT
-        ========================================= */
+        ========================= */
 
         .iut::before,
         .iut .icon-box {
@@ -497,21 +430,17 @@
             height: 38px;
 
             display: flex;
-
             flex-direction: column;
-
             justify-content: center;
 
             padding: 5px;
 
             border: 2px solid #ffffff;
-
             border-radius: 3px;
 
             color: #ffffff;
 
             font-size: 8px;
-
             font-weight: 800;
         }
 
@@ -527,16 +456,15 @@
             height: 6px;
 
             border: 2px solid #ffffff;
-
             border-bottom: 0;
 
             border-radius: 4px 4px 0 0;
         }
 
 
-        /* =========================================
+        /* =========================
            OTT
-        ========================================= */
+        ========================= */
 
         .ott::before,
         .ott .icon-box {
@@ -550,7 +478,6 @@
             height: 39px;
 
             border: 2px solid #ffffff;
-
             border-radius: 3px;
         }
 
@@ -594,9 +521,9 @@
         }
 
 
-        /* =========================================
+        /* =========================
            IP MAN
-        ========================================= */
+        ========================= */
 
         .ip-man::before,
         .ip-man .icon-box {
@@ -611,9 +538,9 @@
         }
 
 
-        /* =========================================
+        /* =========================
            MENU TEXT
-        ========================================= */
+        ========================= */
 
         .menu-info {
             flex: 1;
@@ -625,7 +552,6 @@
             margin-bottom: 3px;
 
             font-size: 13px;
-
             line-height: 1;
 
             font-weight: 800;
@@ -635,12 +561,8 @@
             color: #303936;
 
             font-size: 7px;
-
             line-height: 1.3;
         }
-
-
-        /* TITLE COLORS */
 
         .hazard .menu-info h3 {
             color: #d62828;
@@ -659,9 +581,9 @@
         }
 
 
-        /* =========================================
+        /* =========================
            ARROW
-        ========================================= */
+        ========================= */
 
         .arrow {
             padding-right: 10px;
@@ -669,14 +591,13 @@
             color: #087443;
 
             font-size: 27px;
-
             font-weight: 300;
         }
 
 
-        /* =========================================
+        /* =========================
            FOOTER
-        ========================================= */
+        ========================= */
 
         footer {
             text-align: center;
@@ -717,7 +638,6 @@
             color: #087443;
 
             font-size: 14px;
-
             font-weight: 800;
 
             border: 2px solid #087443;
@@ -737,7 +657,6 @@
             color: #087443;
 
             font-size: 10px;
-
             font-weight: 800;
 
             margin-bottom: 5px;
@@ -762,10 +681,9 @@
         }
 
 
-        /* =========================================
+        /* =========================
            DESKTOP
-           Tetap bentuk linktree/mobile
-        ========================================= */
+        ========================= */
 
         @media (min-width: 501px) {
 
@@ -776,130 +694,391 @@
         }
 
     </style>
+
 </head>
 
 
 <body>
 
-    <main class="container">
+<main class="container">
 
 
-        <!-- =====================================
-             HEADER
-        ====================================== -->
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-        <header class="hero">
+    <header class="hero">
 
-            <div class="dots dots-left"></div>
+        <div class="dots dots-left"></div>
 
-            <div class="dots dots-right"></div>
+        <div class="dots dots-right"></div>
 
 
-            <!-- Decorative Leaf -->
+        <div class="leaf-decoration">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-            <div class="leaf-decoration">
 
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="shield-decoration">
+            <span>✓</span>
+        </div>
+
+
+        <!-- EHS LOGO -->
+
+        <div class="logo">
+
+            <svg viewBox="0 0 180 180">
+
+                <path
+                    d="
+                    M90 8
+                    L102 11
+                    L107 27
+                    C112 28 117 30 122 33
+                    L136 24
+                    L147 35
+                    L138 49
+                    C141 54 143 59 144 64
+                    L160 69
+                    L163 81
+                    L160 93
+                    L144 98
+                    C143 103 141 108 138 113
+                    L147 127
+                    L136 138
+                    L122 129
+                    C117 132 112 134 107 135
+                    L102 151
+                    L90 154
+                    L78 151
+                    L73 135
+                    C68 134 63 132 58 129
+                    L44 138
+                    L33 127
+                    L42 113
+                    C39 108 37 103 36 98
+                    L20 93
+                    L17 81
+                    L20 69
+                    L36 64
+                    C37 59 39 54 42 49
+                    L33 35
+                    L44 24
+                    L58 33
+                    C63 30 68 28 73 27
+                    L78 11
+                    Z
+                    "
+                    fill="#087443"
+                />
+
+                <circle
+                    cx="90"
+                    cy="81"
+                    r="48"
+                    fill="#ffffff"
+                />
+
+                <rect
+                    x="82"
+                    y="48"
+                    width="16"
+                    height="66"
+                    rx="2"
+                    fill="#087443"
+                />
+
+                <rect
+                    x="57"
+                    y="73"
+                    width="66"
+                    height="16"
+                    rx="2"
+                    fill="#087443"
+                />
+
+            </svg>
+
+        </div>
+
+
+        <h1>
+            EHS
+        </h1>
+
+
+        <div class="subtitle">
+
+            <span>ENVIRONMENT</span>
+
+            <b>•</b>
+
+            <span>HEALTH</span>
+
+            <b>•</b>
+
+            <span>SAFETY</span>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         WELCOME
+    ========================= -->
+
+    <section class="welcome">
+
+        <h2>
+            SELAMAT DATANG
+        </h2>
+
+
+        <div class="divider">
+
+            <span></span>
+
+            <strong>
+                SAFETY ACCOUNTABILITY<br>
+                PROGRAM (SAP)
+            </strong>
+
+            <span></span>
+
+        </div>
+
+
+        <p>
+            Bersama kita wujudkan
+            <br>
+
+            lingkungan kerja yang
+
+            <strong class="red-text">
+                aman
+            </strong>,
+
+            <strong class="orange-text">
+                sehat
+            </strong>
+
+            dan
+
+            <strong class="green-text">
+                ramah lingkungan.
+            </strong>
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <section class="menu">
+
+
+        <!-- HAZARD -->
+
+        <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdOdrCYzzyOpFpVztoFD36AzLSJCNK_tc5roqjH1tuaaDv_Ug/viewform"
+            class="menu-card hazard"
+        >
+
+            <div class="icon-box">
+
+                <div class="hazard-icon">
+                    !
+                </div>
 
             </div>
 
 
-            <!-- Decorative Shield -->
+            <div class="menu-info">
 
-            <div class="shield-decoration">
+                <h3>
+                    HAZARD
+                </h3>
 
-                <span>
-                    ✓
-                </span>
+                <p>
+                    Identifikasi &amp; pelaporan
+                    <br>
+                    hazard
+                </p>
 
             </div>
 
 
-            <!-- EHS LOGO -->
+            <div class="arrow">
+                ›
+            </div>
 
-            <div class="logo">
+        </a>
+
+
+        <!-- IUT -->
+
+        <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeCVowY4akldeG04XIYkJ_uHP3ioOj9Q9wBh4NryigJ3u1EIQ/viewform"
+            class="menu-card iut"
+        >
+
+            <div class="icon-box">
+
+                <div class="clipboard-icon">
+
+                    <span>✓</span>
+                    <span>✓</span>
+                    <span>✓</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-info">
+
+                <h3>
+                    IUT
+                </h3>
+
+                <p>
+                    Informasi &amp; akses IUT
+                </p>
+
+            </div>
+
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
+
+        <!-- OTT -->
+
+        <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeETk9qVs3X3NoWsIL83MJKZVFo9xvyx__xN5gnpsnSnzn4WQ/viewform"
+            class="menu-card ott"
+        >
+
+            <div class="icon-box">
+
+                <div class="document-icon">
+
+                    <span class="document-line line-1"></span>
+                    <span class="document-line line-2"></span>
+                    <span class="document-line line-3"></span>
+
+                    <span class="pen"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-info">
+
+                <h3>
+                    OTT
+                </h3>
+
+                <p>
+                    Observasi &amp; pelaporan OTT
+                </p>
+
+            </div>
+
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
+
+        <!-- IP MAN -->
+
+        <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc6Zh9CBsS0qGFcAOtFk_mlBlL-XEGmGQWjh5qw9m4XbUZ6TA/viewform"
+            class="menu-card ip-man"
+        >
+
+            <div class="icon-box">
 
                 <svg
-                    viewBox="0 0 180 180"
-                    aria-label="EHS Logo"
+                    class="ip-man-icon"
+                    viewBox="0 0 100 100"
                 >
 
-                    <!-- Gear -->
-
                     <path
+                        fill="#ffffff"
                         d="
-                        M90 8
-                        L102 11
-                        L107 27
-                        C112 28 117 30 122 33
-                        L136 24
-                        L147 35
-                        L138 49
-                        C141 54 143 59 144 64
-                        L160 69
-                        L163 81
-                        L160 93
-                        L144 98
-                        C143 103 141 108 138 113
-                        L147 127
-                        L136 138
-                        L122 129
-                        C117 132 112 134 107 135
-                        L102 151
-                        L90 154
-                        L78 151
-                        L73 135
-                        C68 134 63 132 58 129
-                        L44 138
-                        L33 127
-                        L42 113
-                        C39 108 37 103 36 98
-                        L20 93
-                        L17 81
-                        L20 69
-                        L36 64
-                        C37 59 39 54 42 49
-                        L33 35
-                        L44 24
-                        L58 33
-                        C63 30 68 28 73 27
-                        L78 11
+                        M50 5
+                        L58 10
+                        L68 7
+                        L73 16
+                        L83 18
+                        L83 28
+                        L92 33
+                        L89 43
+                        L96 50
+                        L89 57
+                        L92 67
+                        L83 72
+                        L83 82
+                        L73 84
+                        L68 93
+                        L58 90
+                        L50 95
+                        L42 90
+                        L32 93
+                        L27 84
+                        L17 82
+                        L17 72
+                        L8 67
+                        L11 57
+                        L4 50
+                        L11 43
+                        L8 33
+                        L17 28
+                        L17 18
+                        L27 16
+                        L32 7
+                        L42 10
                         Z
                         "
-                        fill="#087443"
                     />
 
-
-                    <!-- White Circle -->
-
                     <circle
-                        cx="90"
-                        cy="81"
-                        r="48"
+                        cx="50"
+                        cy="50"
+                        r="31"
+                        fill="#1976c9"
+                    />
+
+                    <rect
+                        x="44"
+                        y="30"
+                        width="12"
+                        height="40"
+                        rx="2"
                         fill="#ffffff"
                     />
 
-
-                    <!-- Plus -->
-
                     <rect
-                        x="82"
-                        y="48"
-                        width="16"
-                        height="66"
+                        x="30"
+                        y="44"
+                        width="40"
+                        height="12"
                         rx="2"
-                        fill="#087443"
-                    />
-
-                    <rect
-                        x="57"
-                        y="73"
-                        width="66"
-                        height="16"
-                        rx="2"
-                        fill="#087443"
+                        fill="#ffffff"
                     />
 
                 </svg>
@@ -907,372 +1086,62 @@
             </div>
 
 
-            <h1>
-                EHS
-            </h1>
+            <div class="menu-info">
 
+                <h3>
+                    IP MAN
+                </h3>
 
-            <div class="subtitle">
-
-                <span>
-                    ENVIRONMENT
-                </span>
-
-                <b>
-                    •
-                </b>
-
-                <span>
-                    HEALTH
-                </span>
-
-                <b>
-                    •
-                </b>
-
-                <span>
-                    SAFETY
-                </span>
-
-            </div>
-
-        </header>
-
-
-        <!-- =====================================
-             WELCOME
-        ====================================== -->
-
-        <section class="welcome">
-
-            <h2>
-                SELAMAT DATANG
-            </h2>
-
-
-            <div class="divider">
-
-                <span></span>
-
-                <strong>
-                    SAFETY ACCOUNTABILITY<br>
-                    PROGRAM (SAP)
-                </strong>
-
-                <span></span>
+                <p>
+                    Informasi &amp; akses IP Man
+                </p>
 
             </div>
 
 
-            <p>
-
-                Bersama kita wujudkan
-                <br>
-
-                lingkungan kerja yang
-
-                <strong class="red-text">
-                    aman
-                </strong>,
-
-                <strong class="orange-text">
-                    sehat
-                </strong>
-
-                dan
-
-                <strong class="green-text">
-                    ramah lingkungan.
-                </strong>
-
-            </p>
-
-        </section>
-
-
-        <!-- =====================================
-             MENU
-        ====================================== -->
-
-        <section class="menu">
-
-
-            <!-- HAZARD -->
-
-            <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdOdrCYzzyOpFpVztoFD36AzLSJCNK_tc5roqjH1tuaaDv_Ug/viewform?usp=dialog"
-                class="menu-card hazard"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="icon-box">
-
-                    <div class="hazard-icon">
-                        !
-                    </div>
-
-                </div>
-
-
-                <div class="menu-info">
-
-                    <h3>
-                        HAZARD
-                    </h3>
-
-                    <p>
-                        Identifikasi &amp; pelaporan
-                        <br>
-                        hazard
-                    </p>
-
-                </div>
-
-
-                <div class="arrow">
-                    ›
-                </div>
-
-            </a>
-
-
-            <!-- IUT -->
-
-            <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeCVowY4akldeG04XIYkJ_uHP3ioOj9Q9wBh4NryigJ3u1EIQ/viewform?usp=dialog"
-                class="menu-card iut"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="icon-box">
-
-                    <div class="clipboard-icon">
-
-                        <span>✓</span>
-                        <span>✓</span>
-                        <span>✓</span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="menu-info">
-
-                    <h3>
-                        IUT
-                    </h3>
-
-                    <p>
-                        Informasi &amp; akses IUT
-                    </p>
-
-                </div>
-
-
-                <div class="arrow">
-                    ›
-                </div>
-
-            </a>
-
-
-            <!-- OTT -->
-
-            <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeETk9qVs3X3NoWsIL83MJKZVFo9xvyx__xN5gnpsnSnzn4WQ/viewform?usp=dialog"
-                class="menu-card ott"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="icon-box">
-
-                    <div class="document-icon">
-
-                        <span class="document-line line-1"></span>
-                        <span class="document-line line-2"></span>
-                        <span class="document-line line-3"></span>
-
-                        <span class="pen"></span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="menu-info">
-
-                    <h3>
-                        OTT
-                    </h3>
-
-                    <p>
-                        Observasi &amp; pelaporan OTT
-                    </p>
-
-                </div>
-
-
-                <div class="arrow">
-                    ›
-                </div>
-
-            </a>
-
-
-            <!-- IP MAN -->
-
-            <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSc6Zh9CBsS0qGFcAOtFk_mlBlL-XEGmGQWjh5qw9m4XbUZ6TA/viewform?usp=dialog"
-                class="menu-card ip-man"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="icon-box">
-
-                    <svg
-                        class="ip-man-icon"
-                        viewBox="0 0 100 100"
-                        aria-label="IP Man"
-                    >
-
-                        <!-- Gear -->
-
-                        <path
-                            fill="#ffffff"
-                            d="
-                            M50 5
-                            L58 10
-                            L68 7
-                            L73 16
-                            L83 18
-                            L83 28
-                            L92 33
-                            L89 43
-                            L96 50
-                            L89 57
-                            L92 67
-                            L83 72
-                            L83 82
-                            L73 84
-                            L68 93
-                            L58 90
-                            L50 95
-                            L42 90
-                            L32 93
-                            L27 84
-                            L17 82
-                            L17 72
-                            L8 67
-                            L11 57
-                            L4 50
-                            L11 43
-                            L8 33
-                            L17 28
-                            L17 18
-                            L27 16
-                            L32 7
-                            L42 10
-                            Z
-                            "
-                        />
-
-
-                        <!-- Blue Circle -->
-
-                        <circle
-                            cx="50"
-                            cy="50"
-                            r="31"
-                            fill="#1976c9"
-                        />
-
-
-                        <!-- Plus -->
-
-                        <rect
-                            x="44"
-                            y="30"
-                            width="12"
-                            height="40"
-                            rx="2"
-                            fill="#ffffff"
-                        />
-
-                        <rect
-                            x="30"
-                            y="44"
-                            width="40"
-                            height="12"
-                            rx="2"
-                            fill="#ffffff"
-                        />
-
-                    </svg>
-
-                </div>
-
-
-                <div class="menu-info">
-
-                    <h3>
-                        IP MAN
-                    </h3>
-
-                    <p>
-                        Informasi &amp; akses IP Man
-                    </p>
-
-                </div>
-
-
-                <div class="arrow">
-                    ›
-                </div>
-
-            </a>
-
-        </section>
-
-
-        <!-- =====================================
-             FOOTER
-        ====================================== -->
-
-        <footer>
-
-            <div class="footer-decoration">
-
-                <span></span>
-
-                <div class="shield">
-                    ✓
-                </div>
-
-                <span></span>
-
+            <div class="arrow">
+                ›
             </div>
 
+        </a>
 
-            <h4>
-                PT ARAFURA SURYA ALAM
-            </h4>
-
-
-            <div class="footer-line"></div>
+    </section>
 
 
-            <p>
-                Safety Starts With Us
-            </p>
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
-        </footer>
+    <footer>
 
-    </main>
+        <div class="footer-decoration">
+
+            <span></span>
+
+            <div class="shield">
+                ✓
+            </div>
+
+            <span></span>
+
+        </div>
+
+
+        <h4>
+            PT ARAFURA SURYA ALAM
+        </h4>
+
+
+        <div class="footer-line"></div>
+
+
+        <p>
+            Safety Starts With Us
+        </p>
+
+    </footer>
+
+</main>
 
 </body>
 
