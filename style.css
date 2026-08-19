@@ -1,4 +1,3 @@
-```css id="k8m2vf"
 /* =========================================
    RESET
 ========================================= */
@@ -15,21 +14,24 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f8f6;
-    color: #1f2933;
+    background: #f4f6f5;
+    color: #202a2e;
 }
 
 
 /* =========================================
-   MAIN CONTAINER
+   CONTAINER
 ========================================= */
 
 .container {
     width: 100%;
-    max-width: 1080px;
+    max-width: 500px;
     min-height: 100vh;
+
     margin: 0 auto;
+
     background: #ffffff;
+
     overflow: hidden;
 }
 
@@ -40,31 +42,27 @@ body {
 
 .hero {
     position: relative;
-    min-height: 390px;
+
+    height: 215px;
+
+    padding-top: 18px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     text-align: center;
-
-    padding: 30px;
 
     overflow: hidden;
 
     background:
         radial-gradient(
             circle,
-            rgba(27, 123, 79, 0.10) 3px,
-            transparent 4px
-        ) 25px 20px / 32px 32px,
-        linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #ffffff 72%,
-            #eef7ef 100%
+            #dce9df 3px,
+            transparent 3.5px
         );
+
+    background-size: 28px 28px;
 }
 
 
@@ -75,18 +73,18 @@ body {
 .dots {
     position: absolute;
 
-    width: 150px;
-    height: 150px;
+    width: 90px;
+    height: 90px;
 
-    opacity: 0.55;
+    opacity: 0.65;
 
     background-image:
         radial-gradient(
-            #d9e8dc 3px,
-            transparent 3px
+            #d8e6db 3px,
+            transparent 3.5px
         );
 
-    background-size: 28px 28px;
+    background-size: 22px 22px;
 }
 
 .dots-left {
@@ -96,12 +94,12 @@ body {
 
 .dots-right {
     right: 0;
-    top: 90px;
+    top: 45px;
 }
 
 
 /* =========================================
-   DECORATIVE LEAF
+   LEAF
 ========================================= */
 
 .leaf-decoration {
@@ -110,8 +108,8 @@ body {
     left: -25px;
     bottom: -10px;
 
-    width: 150px;
-    height: 190px;
+    width: 100px;
+    height: 90px;
 
     opacity: 0.18;
 }
@@ -119,16 +117,12 @@ body {
 .leaf-decoration span {
     position: absolute;
 
-    display: block;
-
-    width: 60px;
-    height: 105px;
+    width: 38px;
+    height: 70px;
 
     border-radius: 100% 0 100% 0;
 
     background: #79b783;
-
-    transform-origin: bottom center;
 }
 
 .leaf-decoration span:nth-child(1) {
@@ -139,21 +133,58 @@ body {
 }
 
 .leaf-decoration span:nth-child(2) {
-    left: 68px;
-    bottom: 25px;
+    left: 55px;
+    bottom: 20px;
 
-    transform:
-        rotate(30deg)
-        scale(0.85);
+    transform: rotate(30deg) scale(.75);
 }
 
 .leaf-decoration span:nth-child(3) {
     left: 10px;
+    bottom: 25px;
+
+    transform: rotate(-55deg) scale(.65);
+}
+
+
+/* =========================================
+   SHIELD
+========================================= */
+
+.shield-decoration {
+    position: absolute;
+
+    right: 20px;
     bottom: 45px;
 
-    transform:
-        rotate(-55deg)
-        scale(0.7);
+    width: 48px;
+    height: 58px;
+
+    opacity: 0.15;
+
+    border: 4px solid #79b783;
+
+    clip-path:
+        polygon(
+            50% 0,
+            100% 18%,
+            90% 72%,
+            50% 100%,
+            10% 72%,
+            0 18%
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shield-decoration span {
+    color: #79b783;
+
+    font-size: 25px;
+
+    font-weight: 800;
 }
 
 
@@ -165,28 +196,22 @@ body {
     position: relative;
     z-index: 2;
 
-    width: 150px;
-    height: 150px;
+    width: 68px;
+    height: 68px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 5px;
+    margin-top: 3px;
 }
 
-.logo img {
+.logo svg {
     width: 100%;
     height: 100%;
-
-    object-fit: contain;
 
     display: block;
 }
 
 
 /* =========================================
-   EHS TITLE
+   EHS
 ========================================= */
 
 .hero h1 {
@@ -195,14 +220,16 @@ body {
 
     color: #087443;
 
-    font-size: 92px;
-    line-height: 0.95;
+    font-size: 43px;
+
+    line-height: 1;
 
     font-weight: 800;
 
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 
-    margin-bottom: 12px;
+    margin-top: 2px;
+    margin-bottom: 3px;
 }
 
 
@@ -219,58 +246,19 @@ body {
     align-items: center;
     justify-content: center;
 
-    gap: 12px;
+    gap: 5px;
 
     color: #087443;
 
-    font-size: 19px;
+    font-size: 7px;
+
     font-weight: 700;
 
-    letter-spacing: 1px;
+    letter-spacing: .4px;
 }
 
 .subtitle b {
-    font-size: 13px;
-}
-
-
-/* =========================================
-   SHIELD
-========================================= */
-
-.shield-decoration {
-    position: absolute;
-
-    right: 70px;
-    bottom: 45px;
-
-    width: 90px;
-    height: 105px;
-
-    opacity: 0.18;
-
-    color: #79b783;
-
-    border: 7px solid #79b783;
-
-    clip-path:
-        polygon(
-            50% 0%,
-            100% 18%,
-            90% 72%,
-            50% 100%,
-            10% 72%,
-            0% 18%
-        );
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.shield-check {
-    font-size: 45px;
-    font-weight: 800;
+    font-size: 6px;
 }
 
 
@@ -281,13 +269,14 @@ body {
 .welcome {
     text-align: center;
 
-    padding: 32px 30px 28px;
+    padding: 20px 25px 18px;
 }
 
 .welcome h2 {
     color: #087443;
 
-    font-size: 37px;
+    font-size: 22px;
+
     line-height: 1.1;
 
     font-weight: 800;
@@ -295,44 +284,42 @@ body {
 
 
 /* =========================================
-   SAP DIVIDER
+   SAP
 ========================================= */
 
 .divider {
-    width: 82%;
+    width: 100%;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    gap: 16px;
+    gap: 7px;
 
-    margin: 18px auto 22px;
+    margin: 9px auto 13px;
 }
 
 .divider span {
-    height: 2px;
-
     flex: 1;
+
+    height: 1px;
 
     background: #087443;
 }
 
-.sap-divider-text {
-    flex-shrink: 0;
-
+.divider strong {
     color: #087443;
 
-    font-size: 14px;
+    font-size: 7px;
 
-    font-weight: 800;
+    line-height: 1.25;
 
-    letter-spacing: 0.5px;
-
-    white-space: nowrap;
+    font-weight: 700;
 
     text-align: center;
+
+    white-space: nowrap;
 }
 
 
@@ -343,9 +330,9 @@ body {
 .welcome p {
     color: #303936;
 
-    font-size: 23px;
+    font-size: 9px;
 
-    line-height: 1.55;
+    line-height: 1.45;
 }
 
 .red-text {
@@ -370,14 +357,14 @@ body {
 
     flex-direction: column;
 
-    gap: 9px;
+    gap: 7px;
 
-    padding: 0 95px 35px;
+    padding: 0 25px 27px;
 }
 
 
 /* =========================================
-   MENU CARD
+   CARD
 ========================================= */
 
 .menu-card {
@@ -389,34 +376,27 @@ body {
 
     width: 100%;
 
-    min-height: 130px;
+    height: 72px;
 
     background: #ffffff;
 
     border: 1px solid #e5e7eb;
 
-    border-radius: 16px;
+    border-radius: 11px;
+
+    overflow: hidden;
 
     text-decoration: none;
 
     color: inherit;
 
-    overflow: hidden;
-
     box-shadow:
-        0 5px 14px rgba(0, 0, 0, 0.07);
-}
-
-.menu-card:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 9px 20px rgba(0, 0, 0, 0.11);
+        0 3px 9px rgba(0, 0, 0, .07);
 }
 
 
 /* =========================================
-   CARD ACCENT
+   LEFT COLOR
 ========================================= */
 
 .menu-card::before {
@@ -428,7 +408,7 @@ body {
     top: 0;
     bottom: 0;
 
-    width: 7px;
+    width: 4px;
 }
 
 
@@ -437,17 +417,17 @@ body {
 ========================================= */
 
 .icon-box {
-    width: 145px;
-    min-width: 145px;
+    width: 70px;
+    min-width: 70px;
 
-    height: 130px;
+    height: 72px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    margin-left: 7px;
+    margin-left: 4px;
 }
 
 
@@ -464,8 +444,8 @@ body {
 }
 
 .hazard-icon {
-    width: 75px;
-    height: 68px;
+    width: 38px;
+    height: 34px;
 
     display: flex;
 
@@ -474,14 +454,15 @@ body {
 
     color: #ffffff;
 
-    font-size: 50px;
+    font-size: 25px;
+
     font-weight: 900;
 
     clip-path:
         polygon(
-            50% 0%,
+            50% 0,
             100% 92%,
-            0% 92%
+            0 92%
         );
 }
 
@@ -501,25 +482,27 @@ body {
 .clipboard-icon {
     position: relative;
 
-    width: 62px;
-    height: 78px;
+    width: 30px;
+    height: 38px;
 
     display: flex;
+
     flex-direction: column;
 
     justify-content: center;
 
-    gap: 3px;
+    gap: 0;
 
-    padding: 12px 8px;
+    padding: 5px;
 
-    border: 5px solid #ffffff;
+    border: 2px solid #ffffff;
 
-    border-radius: 5px;
+    border-radius: 3px;
 
     color: #ffffff;
 
-    font-size: 17px;
+    font-size: 8px;
+
     font-weight: 800;
 }
 
@@ -528,17 +511,17 @@ body {
 
     position: absolute;
 
-    top: -12px;
-    left: 15px;
+    top: -5px;
+    left: 7px;
 
-    width: 27px;
-    height: 13px;
+    width: 13px;
+    height: 6px;
 
-    border: 5px solid #ffffff;
+    border: 2px solid #ffffff;
 
     border-bottom: 0;
 
-    border-radius: 7px 7px 0 0;
+    border-radius: 4px 4px 0 0;
 }
 
 
@@ -557,51 +540,50 @@ body {
 .document-icon {
     position: relative;
 
-    width: 62px;
-    height: 78px;
+    width: 31px;
+    height: 39px;
 
-    border: 5px solid #ffffff;
+    border: 2px solid #ffffff;
 
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .document-line {
     position: absolute;
 
-    left: 10px;
+    left: 5px;
 
-    width: 31px;
-    height: 4px;
+    width: 17px;
 
-    border-radius: 2px;
+    height: 2px;
 
     background: #ffffff;
 }
 
 .line-1 {
-    top: 18px;
+    top: 9px;
 }
 
 .line-2 {
-    top: 32px;
+    top: 16px;
 }
 
 .line-3 {
-    top: 46px;
+    top: 23px;
 }
 
 .pen {
     position: absolute;
 
-    right: -13px;
-    bottom: -10px;
+    right: -7px;
+    bottom: -6px;
 
-    width: 10px;
-    height: 43px;
+    width: 5px;
+    height: 21px;
 
     background: #ffffff;
 
-    border-radius: 3px;
+    border-radius: 2px;
 
     transform: rotate(42deg);
 }
@@ -620,18 +602,8 @@ body {
 }
 
 .ip-man-icon {
-    width: 78px;
-    height: 78px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-}
-
-.ip-gear-svg {
-    width: 76px;
-    height: 76px;
+    width: 39px;
+    height: 39px;
 
     display: block;
 }
@@ -644,15 +616,15 @@ body {
 .menu-info {
     flex: 1;
 
-    padding: 15px 20px;
+    padding: 5px 8px;
 }
 
 .menu-info h3 {
-    margin-bottom: 6px;
+    margin-bottom: 3px;
 
-    font-size: 28px;
+    font-size: 13px;
 
-    line-height: 1.1;
+    line-height: 1;
 
     font-weight: 800;
 }
@@ -660,14 +632,14 @@ body {
 .menu-info p {
     color: #303936;
 
-    font-size: 19px;
+    font-size: 7px;
 
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 
 /* =========================================
-   TITLE COLORS
+   COLORS
 ========================================= */
 
 .hazard .menu-info h3 {
@@ -692,11 +664,11 @@ body {
 ========================================= */
 
 .arrow {
-    padding-right: 30px;
+    padding-right: 10px;
 
     color: #087443;
 
-    font-size: 58px;
+    font-size: 27px;
 
     font-weight: 300;
 }
@@ -709,7 +681,7 @@ body {
 footer {
     text-align: center;
 
-    padding: 20px 30px 35px;
+    padding: 10px 25px 17px;
 
     background: #ffffff;
 }
@@ -720,672 +692,27 @@ footer {
     align-items: center;
     justify-content: center;
 
-    gap: 18px;
+    gap: 8px;
 
-    margin-bottom: 18px;
+    margin-bottom: 8px;
 }
 
 .footer-decoration > span {
-    width: 170px;
+    width: 45px;
 
-    height: 2px;
+    height: 1px;
 
     background: #087443;
 }
 
 .shield {
-    width: 52px;
-    height: 58px;
+    width: 23px;
+    height: 27px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
-
-    color: #087443;
-
-    font-size: 31px;
-
-    border: 4px solid #087443;
-
-    clip-path:
-        polygon(
-            50% 0%,
-            100% 18%,
-            90% 73%,
-            50% 100%,
-            10% 73%,
-            0% 18%
-        );
-}
-
-footer h4 {
-    color: #087443;
-
-    font-size: 22px;
-
-    font-weight: 800;
-
-    margin-bottom: 12px;
-}
-
-.footer-line {
-    width: 65%;
-
-    height: 2px;
-
-    margin: 0 auto 12px;
-
-    border-top: 2px dashed #087443;
-}
-
-footer p {
-    color: #087443;
-
-    font-size: 19px;
-
-    font-style: italic;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 800px) {
-
-    .hero {
-        min-height: 350px;
-    }
-
-    .logo {
-        width: 130px;
-        height: 130px;
-    }
-
-    .hero h1 {
-        font-size: 78px;
-    }
-
-    .subtitle {
-        font-size: 16px;
-    }
-
-    .shield-decoration {
-        right: 35px;
-
-        width: 70px;
-        height: 85px;
-    }
-
-    .menu {
-        padding-left: 55px;
-        padding-right: 55px;
-    }
-
-    .menu-card {
-        min-height: 115px;
-    }
-
-    .icon-box {
-        width: 125px;
-        min-width: 125px;
-
-        height: 115px;
-    }
-
-    .menu-info h3 {
-        font-size: 25px;
-    }
-
-    .menu-info p {
-        font-size: 17px;
-    }
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    body {
-        background: #ffffff;
-    }
-
-    .hero {
-        min-height: 300px;
-
-        padding: 24px 18px;
-    }
-
-    .logo {
-        width: 105px;
-        height: 105px;
-    }
-
-    .hero h1 {
-        font-size: 60px;
-    }
-
-    .subtitle {
-        gap: 7px;
-
-        font-size: 11px;
-    }
-
-    .shield-decoration {
-        right: -15px;
-        bottom: 25px;
-
-        width: 60px;
-        height: 72px;
-    }
-
-    .welcome {
-        padding: 25px 18px 22px;
-    }
-
-    .welcome h2 {
-        font-size: 26px;
-    }
-
-    .divider {
-        width: 100%;
-
-        gap: 7px;
-
-        margin-top: 13px;
-        margin-bottom: 17px;
-    }
-
-    .sap-divider-text {
-        font-size: 8.5px;
-
-        letter-spacing: 0;
-
-        white-space: nowrap;
-    }
-
-    .welcome p {
-        font-size: 15px;
-
-        line-height: 1.5;
-    }
-
-    .menu {
-        gap: 8px;
-
-        padding: 0 15px 25px;
-    }
-
-    .menu-card {
-        min-height: 88px;
-
-        border-radius: 13px;
-    }
-
-    .icon-box {
-        width: 95px;
-        min-width: 95px;
-
-        height: 88px;
-
-        margin-left: 5px;
-    }
-
-    .hazard-icon {
-        width: 54px;
-        height: 52px;
-
-        font-size: 37px;
-    }
-
-    .clipboard-icon {
-        width: 48px;
-        height: 61px;
-
-        border-width: 4px;
-
-        font-size: 13px;
-    }
-
-    .document-icon {
-        width: 48px;
-        height: 61px;
-
-        border-width: 4px;
-    }
-
-    .document-line {
-        left: 7px;
-
-        width: 25px;
-    }
-
-    .ip-man-icon {
-        width: 58px;
-        height: 58px;
-    }
-
-    .ip-gear-svg {
-        width: 57px;
-        height: 57px;
-    }
-
-    .menu-info {
-        padding: 10px 8px 10px 12px;
-    }
-
-    .menu-info h3 {
-        font-size: 19px;
-    }
-
-    .menu-info p {
-        font-size: 12px;
-    }
-
-    .arrow {
-        padding-right: 14px;
-
-        font-size: 40px;
-    }
-
-    footer {
-        padding: 10px 15px 28px;
-    }
-
-    .footer-decoration {
-        gap: 10px;
-    }
-
-    .footer-decoration > span {
-        width: 75px;
-    }
-
-    footer h4 {
-        font-size: 14px;
-    }
-
-    footer p {
-        font-size: 13px;
-    }
-}
-
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media (max-width: 380px) {
-
-    .logo {
-        width: 90px;
-        height: 90px;
-    }
-
-    .hero h1 {
-        font-size: 52px;
-    }
-
-    .subtitle {
-        font-size: 9px;
-    }
-
-    .welcome h2 {
-        font-size: 23px;
-    }
-
-    .welcome p {
-        font-size: 13px;
-    }
-
-    .menu {
-        padding-left: 11px;
-        padding-right: 11px;
-    }
-
-    .icon-box {
-        width: 82px;
-        min-width: 82px;
-    }
-
-    .menu-info h3 {
-        font-size: 17px;
-    }
-
-    .menu-info p {
-        font-size: 10.5px;
-    }
-
-    .arrow {
-        font-size: 34px;
-    }
-
-    .sap-divider-text {
-        font-size: 7.5px;
-    }
-}
-```
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f8f6;
-    color: #1f2933;
-}
-
-
-/* =========================================
-   MAIN CONTAINER
-========================================= */
-
-.container {
-    width: 100%;
-    max-width: 1080px;
-    min-height: 100vh;
-    margin: 0 auto;
-    background: #ffffff;
-    overflow: hidden;
-}
-
-
-/* =========================================
-   HEADER
-========================================= */
-
-.hero {
-    position: relative;
-    min-height: 390px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 30px;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(27, 123, 79, 0.10) 3px,
-            transparent 4px
-        ) 25px 20px / 32px 32px,
-        linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #ffffff 72%,
-            #eef7ef 100%
-        );
-}
-
-
-/* =========================================
-   DOTS
-========================================= */
-
-.dots {
-    position: absolute;
-
-    width: 150px;
-    height: 150px;
-
-    opacity: 0.55;
-
-    background-image:
-        radial-gradient(
-            #d9e8dc 3px,
-            transparent 3px
-        );
-
-    background-size: 28px 28px;
-}
-
-.dots-left {
-    left: 0;
-    top: 0;
-}
-
-.dots-right {
-    right: 0;
-    top: 90px;
-}
-
-
-/* =========================================
-   DECORATIVE LEAF
-========================================= */
-
-.leaf-decoration {
-    position: absolute;
-
-    left: -25px;
-    bottom: -10px;
-
-    width: 150px;
-    height: 190px;
-
-    opacity: 0.18;
-}
-
-.leaf-decoration span {
-    position: absolute;
-
-    display: block;
-
-    width: 60px;
-    height: 105px;
-
-    border-radius: 100% 0 100% 0;
-
-    background: #79b783;
-
-    transform-origin: bottom center;
-}
-
-.leaf-decoration span:nth-child(1) {
-    left: 35px;
-    bottom: 0;
-
-    transform: rotate(-25deg);
-}
-
-.leaf-decoration span:nth-child(2) {
-    left: 68px;
-    bottom: 25px;
-
-    transform:
-        rotate(30deg)
-        scale(0.85);
-}
-
-.leaf-decoration span:nth-child(3) {
-    left: 10px;
-    bottom: 45px;
-
-    transform:
-        rotate(-55deg)
-        scale(0.7);
-}
-
-
-/* =========================================
-   LOGO
-========================================= */
-
-.logo {
-    position: relative;
-    z-index: 2;
-
-    width: 150px;
-    height: 150px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 5px;
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    display: block;
-}
-
-
-/* =========================================
-   EHS TITLE
-========================================= */
-
-.hero h1 {
-    position: relative;
-    z-index: 2;
-
-    color: #087443;
-
-    font-size: 92px;
-    line-height: 0.95;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 12px;
-}
-
-
-/* =========================================
-   SUBTITLE
-========================================= */
-
-.subtitle {
-    position: relative;
-    z-index: 2;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
-
-    color: #087443;
-
-    font-size: 19px;
-    font-weight: 700;
-
-    letter-spacing: 1px;
-}
-
-.subtitle b {
-    font-size: 13px;
-}
-
-
-/* =========================================
-   SHIELD
-========================================= */
-
-.shield-decoration {
-    position: absolute;
-
-    right: 70px;
-    bottom: 45px;
-
-    width: 90px;
-    height: 105px;
-
-    opacity: 0.18;
-
-    color: #79b783;
-
-    border: 7px solid #79b783;
-
-    clip-path:
-        polygon(
-            50% 0%,
-            100% 18%,
-            90% 72%,
-            50% 100%,
-            10% 72%,
-            0% 18%
-        );
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.shield-check {
-    font-size: 45px;
-    font-weight: 800;
-}
-
-
-/* =========================================
-   WELCOME
-========================================= */
-
-.welcome {
-    text-align: center;
-
-    padding: 32px 30px 28px;
-}
-
-.welcome h2 {
-    color: #087443;
-
-    font-size: 37px;
-    line-height: 1.1;
-
-    font-weight: 800;
-}
-
-
-/* =========================================
-   SAP DIVIDER
-========================================= */
-
-.divider {
-    width: 82%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 16px;
-
-    margin: 18px auto 22px;
-}
-
-.divider span {
-    height: 2px;
-
-    flex: 1;
-
-    background: #087443;
-}
-
-.sap-divider-text {
-    flex-shrink: 0;
 
     color: #087443;
 
@@ -1393,743 +720,56 @@ body {
 
     font-weight: 800;
 
-    letter-spacing: 0.5px;
-
-    white-space: nowrap;
-
-    text-align: center;
-}
-
-
-/* =========================================
-   WELCOME TEXT
-========================================= */
-
-.welcome p {
-    color: #303936;
-
-    font-size: 23px;
-
-    line-height: 1.55;
-}
-
-.red-text {
-    color: #d62828;
-}
-
-.orange-text {
-    color: #ef8b00;
-}
-
-.green-text {
-    color: #087443;
-}
-
-
-/* =========================================
-   MENU
-========================================= */
-
-.menu {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 9px;
-
-    padding: 0 95px 35px;
-}
-
-
-/* =========================================
-   MENU CARD
-========================================= */
-
-.menu-card {
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    width: 100%;
-
-    min-height: 130px;
-
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-
-    border-radius: 16px;
-
-    text-decoration: none;
-
-    color: inherit;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 5px 14px rgba(0, 0, 0, 0.07);
-}
-
-.menu-card:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 9px 20px rgba(0, 0, 0, 0.11);
-}
-
-
-/* =========================================
-   CARD ACCENT
-========================================= */
-
-.menu-card::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 0;
-    bottom: 0;
-
-    width: 7px;
-}
-
-
-/* =========================================
-   ICON BOX
-========================================= */
-
-.icon-box {
-    width: 145px;
-    min-width: 145px;
-
-    height: 130px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    margin-left: 7px;
-}
-
-
-/* =========================================
-   HAZARD
-========================================= */
-
-.hazard::before {
-    background: #d62828;
-}
-
-.hazard .icon-box {
-    background: #d62828;
-}
-
-.hazard-icon {
-    width: 75px;
-    height: 68px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    color: #ffffff;
-
-    font-size: 50px;
-    font-weight: 900;
+    border: 2px solid #087443;
 
     clip-path:
         polygon(
-            50% 0%,
-            100% 92%,
-            0% 92%
-        );
-}
-
-
-/* =========================================
-   IUT
-========================================= */
-
-.iut::before {
-    background: #2da55a;
-}
-
-.iut .icon-box {
-    background: #2da55a;
-}
-
-.clipboard-icon {
-    position: relative;
-
-    width: 62px;
-    height: 78px;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-
-    gap: 3px;
-
-    padding: 12px 8px;
-
-    border: 5px solid #ffffff;
-
-    border-radius: 5px;
-
-    color: #ffffff;
-
-    font-size: 17px;
-    font-weight: 800;
-}
-
-.clipboard-icon::before {
-    content: "";
-
-    position: absolute;
-
-    top: -12px;
-    left: 15px;
-
-    width: 27px;
-    height: 13px;
-
-    border: 5px solid #ffffff;
-
-    border-bottom: 0;
-
-    border-radius: 7px 7px 0 0;
-}
-
-
-/* =========================================
-   OTT
-========================================= */
-
-.ott::before {
-    background: #f29a00;
-}
-
-.ott .icon-box {
-    background: #f29a00;
-}
-
-.document-icon {
-    position: relative;
-
-    width: 62px;
-    height: 78px;
-
-    border: 5px solid #ffffff;
-
-    border-radius: 5px;
-}
-
-.document-line {
-    position: absolute;
-
-    left: 10px;
-
-    width: 31px;
-    height: 4px;
-
-    border-radius: 2px;
-
-    background: #ffffff;
-}
-
-.line-1 {
-    top: 18px;
-}
-
-.line-2 {
-    top: 32px;
-}
-
-.line-3 {
-    top: 46px;
-}
-
-.pen {
-    position: absolute;
-
-    right: -13px;
-    bottom: -10px;
-
-    width: 10px;
-    height: 43px;
-
-    background: #ffffff;
-
-    border-radius: 3px;
-
-    transform: rotate(42deg);
-}
-
-
-/* =========================================
-   IP MAN
-========================================= */
-
-.ip-man::before {
-    background: #1976c9;
-}
-
-.ip-man .icon-box {
-    background: #1976c9;
-}
-
-.ip-man-icon {
-    width: 78px;
-    height: 78px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-}
-
-.ip-gear-svg {
-    width: 76px;
-    height: 76px;
-
-    display: block;
-}
-
-
-/* =========================================
-   MENU INFO
-========================================= */
-
-.menu-info {
-    flex: 1;
-
-    padding: 15px 20px;
-}
-
-.menu-info h3 {
-    margin-bottom: 6px;
-
-    font-size: 28px;
-
-    line-height: 1.1;
-
-    font-weight: 800;
-}
-
-.menu-info p {
-    color: #303936;
-
-    font-size: 19px;
-
-    line-height: 1.4;
-}
-
-
-/* =========================================
-   TITLE COLORS
-========================================= */
-
-.hazard .menu-info h3 {
-    color: #d62828;
-}
-
-.iut .menu-info h3 {
-    color: #23934d;
-}
-
-.ott .menu-info h3 {
-    color: #ef8b00;
-}
-
-.ip-man .menu-info h3 {
-    color: #1976c9;
-}
-
-
-/* =========================================
-   ARROW
-========================================= */
-
-.arrow {
-    padding-right: 30px;
-
-    color: #087443;
-
-    font-size: 58px;
-
-    font-weight: 300;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    text-align: center;
-
-    padding: 20px 30px 35px;
-
-    background: #ffffff;
-}
-
-.footer-decoration {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 18px;
-
-    margin-bottom: 18px;
-}
-
-.footer-decoration > span {
-    width: 170px;
-
-    height: 2px;
-
-    background: #087443;
-}
-
-.shield {
-    width: 52px;
-    height: 58px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    color: #087443;
-
-    font-size: 31px;
-
-    border: 4px solid #087443;
-
-    clip-path:
-        polygon(
-            50% 0%,
+            50% 0,
             100% 18%,
             90% 73%,
             50% 100%,
             10% 73%,
-            0% 18%
+            0 18%
         );
 }
 
 footer h4 {
     color: #087443;
 
-    font-size: 22px;
+    font-size: 10px;
 
     font-weight: 800;
 
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 }
 
 .footer-line {
-    width: 65%;
+    width: 75%;
 
-    height: 2px;
+    height: 1px;
 
-    margin: 0 auto 12px;
+    margin: 0 auto 6px;
 
-    border-top: 2px dashed #087443;
+    border-top: 1px dashed #087443;
 }
 
 footer p {
     color: #087443;
 
-    font-size: 19px;
+    font-size: 8px;
 
     font-style: italic;
 }
 
 
 /* =========================================
-   TABLET
+   LARGER SCREEN
+   Tetap menggunakan desain sempit
 ========================================= */
 
-@media (max-width: 800px) {
+@media (min-width: 501px) {
 
-    .hero {
-        min-height: 350px;
-    }
-
-    .logo {
-        width: 130px;
-        height: 130px;
-    }
-
-    .hero h1 {
-        font-size: 78px;
-    }
-
-    .subtitle {
-        font-size: 16px;
-    }
-
-    .shield-decoration {
-        right: 35px;
-
-        width: 70px;
-        height: 85px;
-    }
-
-    .menu {
-        padding-left: 55px;
-        padding-right: 55px;
-    }
-
-    .menu-card {
-        min-height: 115px;
-    }
-
-    .icon-box {
-        width: 125px;
-        min-width: 125px;
-
-        height: 115px;
-    }
-
-    .menu-info h3 {
-        font-size: 25px;
-    }
-
-    .menu-info p {
-        font-size: 17px;
+    .container {
+        max-width: 500px;
     }
 }
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    body {
-        background: #ffffff;
-    }
-
-    .hero {
-        min-height: 300px;
-
-        padding: 24px 18px;
-    }
-
-    .logo {
-        width: 105px;
-        height: 105px;
-    }
-
-    .hero h1 {
-        font-size: 60px;
-    }
-
-    .subtitle {
-        gap: 7px;
-
-        font-size: 11px;
-    }
-
-    .shield-decoration {
-        right: -15px;
-        bottom: 25px;
-
-        width: 60px;
-        height: 72px;
-    }
-
-    .welcome {
-        padding: 25px 18px 22px;
-    }
-
-    .welcome h2 {
-        font-size: 26px;
-    }
-
-    .divider {
-        width: 100%;
-
-        gap: 7px;
-
-        margin-top: 13px;
-        margin-bottom: 17px;
-    }
-
-    .sap-divider-text {
-        font-size: 8.5px;
-
-        letter-spacing: 0;
-
-        white-space: nowrap;
-    }
-
-    .welcome p {
-        font-size: 15px;
-
-        line-height: 1.5;
-    }
-
-    .menu {
-        gap: 8px;
-
-        padding: 0 15px 25px;
-    }
-
-    .menu-card {
-        min-height: 88px;
-
-        border-radius: 13px;
-    }
-
-    .icon-box {
-        width: 95px;
-        min-width: 95px;
-
-        height: 88px;
-
-        margin-left: 5px;
-    }
-
-    .hazard-icon {
-        width: 54px;
-        height: 52px;
-
-        font-size: 37px;
-    }
-
-    .clipboard-icon {
-        width: 48px;
-        height: 61px;
-
-        border-width: 4px;
-
-        font-size: 13px;
-    }
-
-    .document-icon {
-        width: 48px;
-        height: 61px;
-
-        border-width: 4px;
-    }
-
-    .document-line {
-        left: 7px;
-
-        width: 25px;
-    }
-
-    .ip-man-icon {
-        width: 58px;
-        height: 58px;
-    }
-
-    .ip-gear-svg {
-        width: 57px;
-        height: 57px;
-    }
-
-    .menu-info {
-        padding: 10px 8px 10px 12px;
-    }
-
-    .menu-info h3 {
-        font-size: 19px;
-    }
-
-    .menu-info p {
-        font-size: 12px;
-    }
-
-    .arrow {
-        padding-right: 14px;
-
-        font-size: 40px;
-    }
-
-    footer {
-        padding: 10px 15px 28px;
-    }
-
-    .footer-decoration {
-        gap: 10px;
-    }
-
-    .footer-decoration > span {
-        width: 75px;
-    }
-
-    footer h4 {
-        font-size: 14px;
-    }
-
-    footer p {
-        font-size: 13px;
-    }
-}
-
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media (max-width: 380px) {
-
-    .logo {
-        width: 90px;
-        height: 90px;
-    }
-
-    .hero h1 {
-        font-size: 52px;
-    }
-
-    .subtitle {
-        font-size: 9px;
-    }
-
-    .welcome h2 {
-        font-size: 23px;
-    }
-
-    .welcome p {
-        font-size: 13px;
-    }
-
-    .menu {
-        padding-left: 11px;
-        padding-right: 11px;
-    }
-
-    .icon-box {
-        width: 82px;
-        min-width: 82px;
-    }
-
-    .menu-info h3 {
-        font-size: 17px;
-    }
-
-    .menu-info p {
-        font-size: 10.5px;
-    }
-
-    .arrow {
-        font-size: 34px;
-    }
-
-    .sap-divider-text {
-        font-size: 7.5px;
-    }
-}
-```
