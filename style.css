@@ -4,33 +4,18 @@
     box-sizing: border-box;
 }
 
-
-/* =========================================
-   BODY
-========================================= */
+html {
+    width: 100%;
+    min-height: 100%;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-
+    width: 100%;
     min-height: 100vh;
-
+    background: #f4f3ef;
     display: flex;
     justify-content: center;
-
-    padding: 25px 15px;
-
-    background:
-        radial-gradient(
-            circle at top left,
-            rgba(190, 76, 27, 0.08),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at bottom right,
-            rgba(40, 100, 50, 0.06),
-            transparent 30%
-        ),
-        #f4f3ef;
 }
 
 
@@ -40,16 +25,10 @@ body {
 
 .container {
     width: 100%;
-    max-width: 620px;
-
+    max-width: 430px;
+    min-height: 100vh;
     background: #ffffff;
-
-    border-radius: 28px;
-
     overflow: hidden;
-
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.14);
 }
 
 
@@ -58,152 +37,121 @@ body {
 ========================================= */
 
 .hero {
-    height: 350px;
-
+    height: 275px;
     position: relative;
-
     overflow: hidden;
 
     text-align: center;
-
     color: white;
 
-    padding-top: 45px;
+    padding-top: 35px;
 
     background:
         linear-gradient(
             135deg,
-            #a93f16 0%,
-            #b94d1b 45%,
-            #87330f 100%
+            #a93f16,
+            #b94d1b 50%,
+            #87330f
         );
 }
-
 
 .hero::before {
     content: "";
 
     position: absolute;
 
-    width: 300px;
-    height: 300px;
+    width: 220px;
+    height: 220px;
 
     border-radius: 50%;
 
-    top: -180px;
-    left: -80px;
+    top: -140px;
+    left: -70px;
 
-    background: rgba(255,255,255,0.035);
+    background: rgba(255,255,255,0.04);
 }
-
 
 .hero::after {
     content: "";
 
     position: absolute;
 
-    width: 400px;
-    height: 400px;
+    width: 280px;
+    height: 280px;
 
     border-radius: 50%;
 
-    bottom: -300px;
-    right: -150px;
+    bottom: -220px;
+    right: -120px;
 
-    background: rgba(255,255,255,0.035);
+    background: rgba(255,255,255,0.04);
 }
 
 
 /* =========================================
-   EHS LOGO
+   EHS
 ========================================= */
 
 .logo {
     position: relative;
+    z-index: 2;
 
-    z-index: 3;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    height: 65px;
-
-    margin-bottom: 8px;
+    height: 35px;
 }
-
 
 .logo-leaf {
     position: absolute;
 
-    width: 55px;
-    height: 30px;
+    width: 35px;
+    height: 20px;
 
     border-radius: 100% 0 100% 0;
 
-    border: 5px solid white;
+    border: 3px solid white;
 
     border-left: none;
     border-bottom: none;
 
     transform:
         rotate(-35deg)
-        translate(-20px, -25px);
+        translate(-13px, -17px);
 }
-
 
 .logo-leaf.right {
     transform:
         rotate(35deg)
-        translate(20px, -25px);
+        translate(13px, -17px);
 }
-
-
-/* =========================================
-   EHS TITLE
-========================================= */
 
 .hero h1 {
     position: relative;
-
     z-index: 3;
 
-    font-size: 105px;
+    font-size: 72px;
 
-    line-height: 0.95;
+    line-height: 1;
 
     font-weight: 900;
 
-    letter-spacing: 5px;
-
-    color: #ffffff;
+    letter-spacing: 3px;
 }
-
-
-/* =========================================
-   SUBTITLE
-========================================= */
 
 .subtitle {
     position: relative;
-
     z-index: 3;
 
-    margin-top: 25px;
+    margin-top: 17px;
 
-    font-size: 17px;
+    font-size: 10px;
 
     font-weight: 700;
 
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
 }
-
 
 .subtitle span {
     color: #e6a02e;
-
-    margin: 0 8px;
+    margin: 0 4px;
 }
 
 
@@ -214,29 +162,26 @@ body {
 .leaf-decoration {
     position: absolute;
 
-    left: 35px;
-    bottom: 50px;
+    left: 15px;
+    bottom: 35px;
 
-    font-size: 75px;
+    font-size: 50px;
 
-    color: rgba(236, 161, 90, 0.35);
+    color: rgba(236, 161, 90, 0.30);
 
     transform: rotate(-25deg);
-
-    z-index: 2;
 }
-
 
 .shield-decoration {
     position: absolute;
 
-    right: 55px;
-    top: 115px;
+    right: 22px;
+    top: 90px;
 
-    width: 78px;
-    height: 92px;
+    width: 50px;
+    height: 62px;
 
-    border: 5px solid rgba(240, 160, 90, 0.30);
+    border: 3px solid rgba(240, 160, 90, 0.30);
 
     border-radius:
         45% 45% 50% 50%;
@@ -246,11 +191,9 @@ body {
     justify-content: center;
     align-items: center;
 
-    font-size: 43px;
+    font-size: 27px;
 
-    color: rgba(240, 160, 90, 0.45);
-
-    z-index: 2;
+    color: rgba(240, 160, 90, 0.4);
 }
 
 
@@ -264,109 +207,83 @@ body {
     text-align: center;
 
     padding:
-        55px
-        30px
-        25px;
+        42px
+        20px
+        15px;
 }
-
 
 .welcome::before {
     content: "";
 
     position: absolute;
 
-    top: -35px;
+    top: -25px;
     left: -5%;
 
     width: 110%;
-    height: 70px;
+    height: 50px;
 
-    background: #ffffff;
+    background: white;
 
     border-radius: 50% 50% 0 0;
 }
 
-
 .welcome h2 {
     position: relative;
 
-    font-size: 39px;
+    font-size: 27px;
 
     color: #2a211d;
 
     font-weight: 800;
-
-    letter-spacing: 0.5px;
 }
-
-
-/* =========================================
-   DIVIDER
-========================================= */
 
 .divider {
     display: flex;
 
+    justify-content: center;
     align-items: center;
 
-    justify-content: center;
+    gap: 10px;
 
-    gap: 18px;
-
-    margin:
-        18px
-        0
-        25px;
+    margin: 13px 0 17px;
 }
 
-
 .divider span {
-    width: 120px;
+    width: 65px;
     height: 2px;
 
     background: #d87832;
 }
 
-
 .leaf-small {
-    font-size: 32px;
+    font-size: 23px;
 
     color: #367342;
 
     transform: rotate(-20deg);
 }
 
-
-/* =========================================
-   WELCOME TEXT
-========================================= */
-
 .welcome p {
     color: #252525;
 
-    font-size: 20px;
+    font-size: 15px;
 
-    line-height: 1.55;
+    line-height: 1.5;
 }
-
 
 .red-text {
     color: #c51d17;
-
     font-weight: 700;
 }
-
 
 .orange-text {
     color: #d77917;
-
     font-weight: 700;
 }
 
-
 .green-text {
     color: #34703d;
-
     font-weight: 700;
 }
 
@@ -377,11 +294,10 @@ body {
 
 .menu {
     padding:
-        10px
-        40px
-        35px;
+        5px
+        18px
+        20px;
 }
-
 
 .menu-card {
     display: flex;
@@ -390,45 +306,39 @@ body {
 
     width: 100%;
 
-    min-height: 145px;
+    min-height: 105px;
 
-    margin: 20px 0;
+    margin: 14px 0;
 
     background: #ffffff;
 
-    border-radius: 24px;
+    border-radius: 16px;
 
     overflow: hidden;
 
     text-decoration: none;
 
     box-shadow:
-        0 8px 22px rgba(0,0,0,0.09);
+        0 5px 16px rgba(0,0,0,0.08);
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: 0.2s ease;
 }
 
-
-.menu-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 15px 30px rgba(0,0,0,0.14);
+.menu-card:active {
+    transform: scale(0.98);
 }
 
 
 /* =========================================
-   ICON BOX
+   ICON AREA
 ========================================= */
 
 .icon-box {
-    width: 205px;
+    width: 90px;
 
-    min-width: 205px;
+    min-width: 90px;
 
-    height: 145px;
+    height: 105px;
 
     display: flex;
 
@@ -440,7 +350,7 @@ body {
 
 
 /* =========================================
-   HAZARD - RED
+   HAZARD
 ========================================= */
 
 .hazard .icon-box {
@@ -452,7 +362,6 @@ body {
         );
 }
 
-
 .hazard .menu-info h3,
 .hazard .arrow {
     color: #c51d17;
@@ -460,7 +369,7 @@ body {
 
 
 /* =========================================
-   IUT - ORANGE
+   IUT
 ========================================= */
 
 .iut .icon-box {
@@ -472,7 +381,6 @@ body {
         );
 }
 
-
 .iut .menu-info h3,
 .iut .arrow {
     color: #d77817;
@@ -480,7 +388,7 @@ body {
 
 
 /* =========================================
-   OTT - GREEN
+   OTT
 ========================================= */
 
 .ott .icon-box {
@@ -491,7 +399,6 @@ body {
             #24572c
         );
 }
-
 
 .ott .menu-info h3,
 .ott .arrow {
@@ -504,19 +411,19 @@ body {
 ========================================= */
 
 .hazard-icon {
-    width: 78px;
-    height: 68px;
+    width: 45px;
+    height: 40px;
 
-    border: 6px solid white;
+    border: 4px solid white;
 
-    border-radius: 15px;
+    border-radius: 9px;
 
     display: flex;
 
     justify-content: center;
     align-items: center;
 
-    font-size: 50px;
+    font-size: 28px;
 
     font-weight: bold;
 
@@ -529,41 +436,40 @@ body {
 ========================================= */
 
 .clipboard-icon {
-    width: 70px;
+    width: 45px;
 
-    padding: 15px;
+    padding: 8px;
 
-    border: 5px solid white;
+    border: 3px solid white;
 
-    border-radius: 8px;
+    border-radius: 6px;
 
-    font-size: 18px;
+    font-size: 10px;
 
-    line-height: 18px;
+    line-height: 10px;
 
     font-weight: bold;
 
     position: relative;
 }
 
-
 .clipboard-icon::before {
     content: "";
 
     position: absolute;
 
-    top: -13px;
-    left: 20px;
+    top: -9px;
+    left: 13px;
 
-    width: 25px;
-    height: 12px;
+    width: 17px;
+    height: 8px;
 
-    border: 4px solid white;
+    border: 3px solid white;
 
     border-bottom: none;
 
     border-radius:
-        8px 8px 0 0;
+        5px 5px 0 0;
 }
 
 
@@ -572,21 +478,19 @@ body {
 ========================================= */
 
 .document-icon {
-    width: 70px;
-    height: 82px;
+    width: 45px;
+    height: 55px;
 
-    border: 5px solid white;
+    border: 3px solid white;
 
-    border-radius: 5px;
+    border-radius: 4px;
 
     display: flex;
 
     justify-content: center;
     align-items: center;
 
-    font-size: 40px;
-
-    transform: rotate(-3deg);
+    font-size: 25px;
 }
 
 
@@ -598,33 +502,29 @@ body {
     flex: 1;
 
     padding:
-        20px
-        15px
-        20px
-        30px;
+        12px
+        8px
+        12px
+        16px;
 
     border-left:
-        3px solid currentColor;
+        2px solid currentColor;
 }
 
-
 .menu-info h3 {
-    font-size: 30px;
+    font-size: 20px;
 
     font-weight: 800;
 
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
-
 .menu-info p {
-    font-size: 17px;
+    font-size: 12px;
 
-    line-height: 1.4;
+    line-height: 1.35;
 
     color: #292929;
-
-    margin: 0;
 }
 
 
@@ -633,11 +533,11 @@ body {
 ========================================= */
 
 .arrow {
-    font-size: 58px;
+    font-size: 38px;
 
     line-height: 1;
 
-    margin-right: 25px;
+    margin-right: 12px;
 
     font-weight: 300;
 }
@@ -651,9 +551,9 @@ footer {
     position: relative;
 
     padding:
-        40px
-        20px
-        35px;
+        32px
+        15px
+        25px;
 
     text-align: center;
 
@@ -665,32 +565,23 @@ footer {
             #a94617,
             #81300e
         );
-
-    overflow: hidden;
 }
-
 
 footer::before {
     content: "";
 
     position: absolute;
 
-    top: -35px;
+    top: -25px;
     left: -5%;
 
     width: 110%;
-    height: 70px;
+    height: 50px;
 
     background: white;
 
-    border-radius:
-        50% 50% 0 0;
+    border-radius: 50% 50% 0 0;
 }
-
-
-/* =========================================
-   FOOTER DECORATION
-========================================= */
 
 .footer-decoration {
     position: relative;
@@ -702,27 +593,23 @@ footer::before {
     justify-content: center;
     align-items: center;
 
-    gap: 20px;
+    gap: 12px;
 
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-
 .footer-decoration span {
-    width: 120px;
-
+    width: 55px;
     height: 2px;
 
     background: #f0a42f;
 }
 
-
 .shield {
-    width: 42px;
-    height: 48px;
+    width: 32px;
+    height: 37px;
 
-    border:
-        3px solid white;
+    border: 2px solid white;
 
     border-radius:
         45% 45% 50% 50%;
@@ -732,42 +619,33 @@ footer::before {
     align-items: center;
     justify-content: center;
 
-    font-size: 22px;
+    font-size: 17px;
 }
-
-
-/* =========================================
-   FOOTER TEXT
-========================================= */
 
 footer h4 {
     position: relative;
 
     z-index: 2;
 
-    font-size: 21px;
+    font-size: 13px;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
-
 
 .footer-line {
     position: relative;
 
     z-index: 2;
 
-    width: 45px;
-    height: 3px;
+    width: 35px;
+    height: 2px;
 
-    margin:
-        0 auto
-        10px;
+    margin: 0 auto 7px;
 
     background: #e4a12b;
 }
-
 
 footer p {
     position: relative;
@@ -776,181 +654,27 @@ footer p {
 
     color: #e8a32e;
 
-    font-size: 20px;
+    font-size: 13px;
 
     font-style: italic;
 }
 
 
 /* =========================================
-   MOBILE
+   DESKTOP
 ========================================= */
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
 
     body {
-        padding: 0;
+        padding: 20px;
     }
-
 
     .container {
-        border-radius: 0;
-    }
+        min-height: auto;
 
+        margin: 20px 0;
 
-    .hero {
-        height: 310px;
-
-        padding-top: 40px;
-    }
-
-
-    .hero h1 {
-        font-size: 80px;
-    }
-
-
-    .subtitle {
-        font-size: 13px;
-    }
-
-
-    .shield-decoration {
-        right: 25px;
-        top: 100px;
-
-        width: 60px;
-        height: 75px;
-
-        font-size: 35px;
-    }
-
-
-    .leaf-decoration {
-        left: 15px;
-        bottom: 45px;
-
-        font-size: 60px;
-    }
-
-
-    .welcome {
-        padding:
-            45px
-            20px
-            20px;
-    }
-
-
-    .welcome h2 {
-        font-size: 30px;
-    }
-
-
-    .welcome p {
-        font-size: 17px;
-    }
-
-
-    .divider span {
-        width: 70px;
-    }
-
-
-    .menu {
-        padding:
-            5px
-            15px
-            25px;
-    }
-
-
-    .menu-card {
-        min-height: 120px;
-
-        border-radius: 18px;
-    }
-
-
-    .icon-box {
-        width: 105px;
-
-        min-width: 105px;
-
-        height: 120px;
-    }
-
-
-    .menu-info {
-        padding:
-            15px
-            8px
-            15px
-            18px;
-    }
-
-
-    .menu-info h3 {
-        font-size: 22px;
-    }
-
-
-    .menu-info p {
-        font-size: 13px;
-    }
-
-
-    .arrow {
-        font-size: 42px;
-
-        margin-right: 12px;
-    }
-
-
-    .hazard-icon {
-        width: 55px;
-        height: 50px;
-
-        border-width: 5px;
-
-        font-size: 35px;
-    }
-
-
-    .clipboard-icon {
-        width: 50px;
-
-        padding: 10px;
-
-        border-width: 4px;
-
-        font-size: 12px;
-
-        line-height: 12px;
-    }
-
-
-    .document-icon {
-        width: 52px;
-        height: 65px;
-
-        border-width: 4px;
-
-        font-size: 28px;
-    }
-
-
-    .footer-decoration span {
-        width: 70px;
-    }
-
-
-    footer h4 {
-        font-size: 16px;
-    }
-
-
-    footer p {
-        font-size: 16px;
+        border-radius: 25px;
     }
 }
