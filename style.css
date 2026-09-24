@@ -10,16 +10,6 @@
 
 
 /* =========================================
-   HTML
-========================================= */
-
-html {
-    width: 100%;
-    min-height: 100%;
-}
-
-
-/* =========================================
    BODY
 ========================================= */
 
@@ -32,10 +22,10 @@ body {
         Helvetica,
         sans-serif;
 
+    background: #f2f5f3;
+
     display: flex;
     justify-content: center;
-
-    background: #f4f3ef;
 
     overflow-x: hidden;
 }
@@ -47,16 +37,13 @@ body {
 
 .container {
     width: 100%;
-    max-width: 430px;
+    max-width: 560px;
 
     min-height: 100vh;
 
     background: #ffffff;
 
     overflow: hidden;
-
-    box-shadow:
-        0 0 35px rgba(0, 0, 0, 0.10);
 }
 
 
@@ -67,200 +54,124 @@ body {
 .hero {
     position: relative;
 
-    height: 275px;
+    height: 255px;
 
-    padding-top: 35px;
-
-    text-align: center;
-
-    color: #ffffff;
+    background: #ffffff;
 
     overflow: hidden;
 
-    background:
+    text-align: center;
+}
+
+
+/* =========================================
+   DOT PATTERN
+========================================= */
+
+.header-pattern {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.8;
+
+    background-image:
+        radial-gradient(
+            circle,
+            #dceee5 4px,
+            transparent 4px
+        );
+
+    background-size:
+        32px 32px;
+
+    mask-image:
         linear-gradient(
-            135deg,
-            #a93f16 0%,
-            #b94d1b 50%,
-            #87330f 100%
+            to bottom,
+            black 0%,
+            black 72%,
+            transparent 100%
         );
 }
 
 
-.hero::before {
-    content: "";
-
-    position: absolute;
-
-    width: 220px;
-    height: 220px;
-
-    border-radius: 50%;
-
-    top: -140px;
-    left: -70px;
-
-    background:
-        rgba(255,255,255,0.035);
-}
-
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 280px;
-    height: 280px;
-
-    border-radius: 50%;
-
-    right: -120px;
-    bottom: -220px;
-
-    background:
-        rgba(255,255,255,0.035);
-}
-
-
 /* =========================================
-   LOGO
+   HEADER CONTENT
 ========================================= */
 
-.logo {
+.header-content {
     position: relative;
 
-    z-index: 3;
+    z-index: 2;
 
-    height: 35px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
+    padding-top: 78px;
 }
 
-
-.logo-leaf {
-    position: absolute;
-
-    width: 36px;
-    height: 21px;
-
-    border: 3px solid #ffffff;
-
-    border-left: none;
-    border-bottom: none;
-
-    border-radius:
-        100% 0 100% 0;
-
-    transform:
-        rotate(-35deg)
-        translate(-13px, -17px);
-}
-
-
-.logo-leaf.right {
-    transform:
-        rotate(35deg)
-        translate(13px, -17px);
-}
-
-
-/* =========================================
-   EHS TITLE
-========================================= */
 
 .hero h1 {
-    position: relative;
+    color: #087f4f;
 
-    z-index: 3;
+    font-size: 58px;
 
-    font-size: 72px;
-
-    line-height: 1;
+    line-height: 0.95;
 
     font-weight: 900;
 
-    letter-spacing: 3px;
-
-    color: #ffffff;
+    letter-spacing: 2px;
 }
 
 
-/* =========================================
-   SUBTITLE
-========================================= */
-
 .subtitle {
-    position: relative;
+    margin-top: 10px;
 
-    z-index: 3;
-
-    margin-top: 17px;
+    color: #087f4f;
 
     font-size: 10px;
 
     font-weight: 700;
 
-    letter-spacing: 0.8px;
+    letter-spacing: 0.7px;
 }
 
 
 .subtitle b {
-    color: #e6a02e;
+    color: #2fac66;
 
     margin:
-        0 4px;
+        0 5px;
 }
 
 
 /* =========================================
-   HEADER DECORATION
+   DECORATIONS
 ========================================= */
 
 .leaf-decoration {
     position: absolute;
 
-    left: 15px;
-    bottom: 35px;
+    left: 32px;
+    bottom: 52px;
 
-    font-size: 50px;
+    color: #dceee5;
 
-    color:
-        rgba(
-            236,
-            161,
-            90,
-            0.30
-        );
+    font-size: 42px;
 
     transform:
-        rotate(-25deg);
-
-    z-index: 2;
+        rotate(-15deg);
 }
 
 
 .shield-decoration {
     position: absolute;
 
-    right: 22px;
-    top: 90px;
+    right: 35px;
+    bottom: 52px;
 
-    width: 50px;
-    height: 62px;
+    width: 45px;
+    height: 55px;
 
     border:
-        3px solid
-        rgba(
-            240,
-            160,
-            90,
-            0.30
-        );
+        3px solid #dceee5;
 
     border-radius:
         45%
@@ -268,23 +179,15 @@ body {
         50%
         50%;
 
+    color: #dceee5;
+
     display: flex;
 
     justify-content: center;
 
     align-items: center;
 
-    font-size: 27px;
-
-    color:
-        rgba(
-            240,
-            160,
-            90,
-            0.40
-        );
-
-    z-index: 2;
+    font-size: 22px;
 }
 
 
@@ -293,50 +196,23 @@ body {
 ========================================= */
 
 .welcome {
-    position: relative;
-
     text-align: center;
 
     padding:
-        42px
-        20px
-        15px;
-}
-
-
-.welcome::before {
-    content: "";
-
-    position: absolute;
-
-    top: -25px;
-
-    left: -5%;
-
-    width: 110%;
-
-    height: 50px;
-
-    background: #ffffff;
-
-    border-radius:
-        50%
-        50%
-        0
-        0;
+        5px
+        28px
+        20px;
 }
 
 
 .welcome h2 {
-    position: relative;
+    color: #087f4f;
 
-    font-size: 27px;
+    font-size: 30px;
 
-    color: #2a211d;
+    font-weight: 900;
 
-    font-weight: 800;
-
-    letter-spacing: 0.3px;
+    letter-spacing: -0.5px;
 }
 
 
@@ -345,73 +221,55 @@ body {
 ========================================= */
 
 .divider {
-    display: flex;
+    width: 100%;
 
-    justify-content: center;
+    display: flex;
 
     align-items: center;
 
-    gap: 12px;
+    justify-content: center;
+
+    gap: 10px;
 
     margin:
-        14px
+        16px
         0
         18px;
 }
 
 
 .divider > span {
-    width: 65px;
+    flex: 1;
 
     height: 2px;
 
-    background: #d87832;
+    background: #087f4f;
 }
 
 
 /* =========================================
-   HAZARD DIVIDER ICON
+   HEALTH ICON
 ========================================= */
 
-.hazard-divider-icon {
-    position: relative;
+.health-icon {
+    width: 34px;
+    height: 34px;
 
-    width: 32px;
-    height: 29px;
+    flex-shrink: 0;
+
+    color: #087f4f;
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
 
-    color: #c51d17;
-
-    font-size: 17px;
-
-    font-weight: 900;
-
-    z-index: 1;
+    justify-content: center;
 }
 
 
-.hazard-divider-icon::before {
-    content: "";
-
-    position: absolute;
-
-    width: 23px;
-    height: 23px;
-
-    border:
-        3px solid #c51d17;
-
-    border-radius: 5px;
-
-    transform:
-        rotate(45deg);
-
-    z-index: -1;
+.health-icon svg {
+    width: 34px;
+    height: 34px;
 }
 
 
@@ -420,30 +278,30 @@ body {
 ========================================= */
 
 .welcome p {
-    color: #252525;
+    color: #222222;
 
-    font-size: 15px;
+    font-size: 13px;
 
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 
 .red-text {
-    color: #c51d17;
+    color: #dc2929;
 
     font-weight: 700;
 }
 
 
 .orange-text {
-    color: #d77917;
+    color: #f28b00;
 
     font-weight: 700;
 }
 
 
 .green-text {
-    color: #34703d;
+    color: #087f4f;
 
     font-weight: 700;
 }
@@ -455,43 +313,47 @@ body {
 
 .menu {
     padding:
-        5px
-        18px
-        20px;
+        0
+        28px
+        25px;
 }
 
 
 /* =========================================
-   MENU CARD
+   CARD
 ========================================= */
 
 .menu-card {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 80px;
+
+    margin-bottom: 10px;
+
     display: flex;
 
     align-items: center;
 
-    width: 100%;
-
-    min-height: 105px;
-
-    margin:
-        14px 0;
-
     background: #ffffff;
 
-    border-radius: 16px;
+    border:
+        1px solid #dfe4e1;
+
+    border-radius: 14px;
 
     overflow: hidden;
 
     text-decoration: none;
 
     box-shadow:
-        0 5px 16px
+        0 5px 14px
         rgba(
             0,
             0,
             0,
-            0.08
+            0.07
         );
 
     transition:
@@ -502,22 +364,22 @@ body {
 
 .menu-card:hover {
     transform:
-        translateY(-3px);
+        translateY(-2px);
 
     box-shadow:
-        0 10px 22px
+        0 8px 18px
         rgba(
             0,
             0,
             0,
-            0.12
+            0.10
         );
 }
 
 
 .menu-card:active {
     transform:
-        scale(0.98);
+        scale(0.985);
 }
 
 
@@ -526,308 +388,101 @@ body {
 ========================================= */
 
 .icon-box {
-    width: 90px;
+    width: 82px;
 
-    min-width: 90px;
+    min-width: 82px;
 
-    height: 105px;
+    height: 80px;
 
     display: flex;
 
     justify-content: center;
 
     align-items: center;
-
-    color: #ffffff;
 }
 
 
 /* =========================================
-   HAZARD - RED
+   HAZARD
 ========================================= */
 
 .hazard .icon-box {
-    background:
-        linear-gradient(
-            145deg,
-            #d62218,
-            #a9140f
-        );
+    background: #dc2929;
 }
 
 
-.hazard .menu-info h3,
-.hazard .arrow {
-    color: #c51d17;
+.hazard .menu-info h3 {
+    color: #dc2929;
 }
 
 
 /* =========================================
-   IUT - ORANGE
+   IUT
 ========================================= */
 
 .iut .icon-box {
-    background:
-        linear-gradient(
-            145deg,
-            #d87817,
-            #bd5b0f
-        );
+    background: #f28b00;
 }
 
 
-.iut .menu-info h3,
-.iut .arrow {
-    color: #d77817;
+.iut .menu-info h3 {
+    color: #f28b00;
 }
 
 
 /* =========================================
-   IPMAN - DARK BLUE
+   IPMAN
 ========================================= */
 
 .ipman .icon-box {
-    background:
-        linear-gradient(
-            145deg,
-            #31577b,
-            #203e5a
-        );
+    background: #087f4f;
 }
 
 
-.ipman .menu-info h3,
-.ipman .arrow {
-    color: #31577b;
+.ipman .menu-info h3 {
+    color: #087f4f;
 }
 
 
 /* =========================================
-   P2H - BLUE
+   P2H
 ========================================= */
 
 .p2h .icon-box {
-    background:
-        linear-gradient(
-            145deg,
-            #3979a3,
-            #275a7d
-        );
+    background: #2fac66;
 }
 
 
-.p2h .menu-info h3,
-.p2h .arrow {
-    color: #316d93;
+.p2h .menu-info h3 {
+    color: #2fac66;
 }
 
 
 /* =========================================
-   OTT - GREEN
+   OTT
 ========================================= */
 
 .ott .icon-box {
-    background:
-        linear-gradient(
-            145deg,
-            #34713a,
-            #24572c
-        );
+    background: #f5a400;
 }
 
 
-.ott .menu-info h3,
-.ott .arrow {
-    color: #286335;
+.ott .menu-info h3 {
+    color: #f5a400;
 }
 
 
 /* =========================================
-   HAZARD ICON
+   ICON SIZES
 ========================================= */
 
-.hazard-icon {
-    width: 45px;
-    height: 40px;
-
-    border:
-        4px solid #ffffff;
-
-    border-radius: 9px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 28px;
-
-    font-weight: 900;
-
-    transform:
-        rotate(45deg);
-}
-
-
-/* =========================================
-   IUT ICON
-========================================= */
-
-.clipboard-icon {
-    width: 45px;
-
-    padding: 8px;
-
-    border:
-        3px solid #ffffff;
-
-    border-radius: 6px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 1px;
-
-    font-size: 10px;
-
-    line-height: 10px;
-
-    font-weight: 900;
-
-    position: relative;
-}
-
-
-.clipboard-icon::before {
-    content: "";
-
-    position: absolute;
-
-    top: -9px;
-    left: 13px;
-
-    width: 17px;
-    height: 8px;
-
-    border:
-        3px solid #ffffff;
-
-    border-bottom: none;
-
-    border-radius:
-        5px
-        5px
-        0
-        0;
-}
-
-
-/* =========================================
-   IPMAN ICON
-========================================= */
-
-.ipman-icon {
-    position: relative;
-
-    width: 53px;
-    height: 58px;
-
-    border:
-        3px solid #ffffff;
-
-    border-radius: 7px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-}
-
-
-/* Person */
-
-.ipman-person {
-    position: relative;
-
-    width: 16px;
-    height: 16px;
-
-    background: #ffffff;
-
-    border-radius: 50%;
-
-    margin-top: -17px;
-}
-
-
-.ipman-person::after {
-    content: "";
-
-    position: absolute;
-
-    width: 28px;
-    height: 18px;
-
-    left: -6px;
-    top: 19px;
-
-    background: #ffffff;
-
-    border-radius:
-        15px
-        15px
-        5px
-        5px;
-}
-
-
-/* Check */
-
-.ipman-check {
-    position: absolute;
-
-    right: -9px;
-    bottom: -8px;
-
-    width: 25px;
-    height: 25px;
-
-    background: #31577b;
-
-    border:
-        3px solid #ffffff;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 14px;
-
-    font-weight: 900;
-}
-
-
-/* =========================================
-   P2H ICON
-========================================= */
-
-.p2h-icon {
-    position: relative;
-
+.hazard-icon,
+.iut-icon,
+.ipman-icon,
+.p2h-icon,
+.ott-icon {
     width: 48px;
-    height: 58px;
-
-    border:
-        3px solid #ffffff;
-
-    border-radius: 5px;
+    height: 48px;
 
     display: flex;
 
@@ -837,143 +492,50 @@ body {
 }
 
 
-.p2h-icon::before {
-    content: "";
-
-    position: absolute;
-
-    top: -8px;
-
-    width: 20px;
-    height: 7px;
-
-    border:
-        3px solid #ffffff;
-
-    border-bottom: none;
-
-    border-radius:
-        5px
-        5px
-        0
-        0;
-}
-
-
-.p2h-icon span {
-    color: #ffffff;
-
-    font-size: 30px;
-
-    font-weight: 900;
+.hazard-icon svg,
+.iut-icon svg,
+.ipman-icon svg,
+.p2h-icon svg,
+.ott-icon svg {
+    width: 48px;
+    height: 48px;
 }
 
 
 /* =========================================
-   OTT ICON
-========================================= */
-
-.document-icon {
-    position: relative;
-
-    width: 45px;
-    height: 55px;
-
-    border:
-        3px solid #ffffff;
-
-    border-radius: 4px;
-
-    overflow: hidden;
-}
-
-
-.document-line {
-    position: absolute;
-
-    left: 7px;
-
-    height: 3px;
-
-    background: #ffffff;
-
-    border-radius: 5px;
-}
-
-
-.line-1 {
-    top: 12px;
-
-    width: 25px;
-}
-
-
-.line-2 {
-    top: 22px;
-
-    width: 20px;
-}
-
-
-.line-3 {
-    top: 32px;
-
-    width: 16px;
-}
-
-
-.pen {
-    position: absolute;
-
-    width: 8px;
-    height: 30px;
-
-    right: 3px;
-    bottom: -2px;
-
-    background: #ffffff;
-
-    transform:
-        rotate(40deg);
-
-    border-radius: 3px;
-}
-
-
-/* =========================================
-   MENU INFORMATION
+   MENU INFO
 ========================================= */
 
 .menu-info {
     flex: 1;
 
-    padding:
-        12px
-        8px
-        12px
-        16px;
+    min-width: 0;
 
-    border-left:
-        2px solid
-        currentColor;
+    padding:
+        10px
+        10px
+        10px
+        12px;
 }
 
 
 .menu-info h3 {
-    font-size: 20px;
+    font-size: 17px;
 
     font-weight: 800;
+
+    line-height: 1.1;
 
     margin-bottom: 4px;
 }
 
 
 .menu-info p {
-    font-size: 12px;
+    color: #333333;
+
+    font-size: 10px;
 
     line-height: 1.35;
-
-    color: #292929;
 }
 
 
@@ -982,13 +544,15 @@ body {
 ========================================= */
 
 .arrow {
-    font-size: 38px;
+    padding-right: 13px;
 
-    line-height: 1;
+    color: #087f4f;
 
-    margin-right: 12px;
+    font-size: 31px;
 
     font-weight: 300;
+
+    line-height: 1;
 }
 
 
@@ -997,48 +561,14 @@ body {
 ========================================= */
 
 footer {
-    position: relative;
-
-    padding:
-        32px
-        15px
-        25px;
-
     text-align: center;
 
-    color: #ffffff;
+    padding:
+        22px
+        25px
+        30px;
 
-    background:
-        linear-gradient(
-            145deg,
-            #a94617,
-            #81300e
-        );
-
-    overflow: hidden;
-}
-
-
-footer::before {
-    content: "";
-
-    position: absolute;
-
-    top: -25px;
-
-    left: -5%;
-
-    width: 110%;
-
-    height: 50px;
-
-    background: #ffffff;
-
-    border-radius:
-        50%
-        50%
-        0
-        0;
+    color: #087f4f;
 }
 
 
@@ -1047,37 +577,33 @@ footer::before {
 ========================================= */
 
 .footer-decoration {
-    position: relative;
-
-    z-index: 2;
-
     display: flex;
 
     justify-content: center;
 
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
 
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 }
 
 
 .footer-decoration span {
-    width: 55px;
+    width: 52px;
 
     height: 2px;
 
-    background: #f0a42f;
+    background: #087f4f;
 }
 
 
-.shield {
-    width: 32px;
-    height: 37px;
+.footer-shield {
+    width: 28px;
+    height: 34px;
 
     border:
-        2px solid #ffffff;
+        2px solid #087f4f;
 
     border-radius:
         45%
@@ -1091,76 +617,144 @@ footer::before {
 
     align-items: center;
 
-    font-size: 17px;
+    font-size: 15px;
 }
 
 
-/* =========================================
-   FOOTER TEXT
-========================================= */
-
 footer h4 {
-    position: relative;
+    color: #087f4f;
 
-    z-index: 2;
+    font-size: 12px;
 
-    font-size: 13px;
+    font-weight: 800;
 
-    letter-spacing: 0.3px;
-
-    margin-bottom: 6px;
+    letter-spacing: 0.4px;
 }
 
 
 .footer-line {
-    position: relative;
+    width: 70%;
 
-    z-index: 2;
-
-    width: 35px;
-
-    height: 2px;
+    height: 1px;
 
     margin:
-        0
-        auto
-        7px;
+        7px
+        auto;
 
-    background: #e4a12b;
+    border-top:
+        2px dashed #8bc9a9;
 }
 
 
 footer p {
-    position: relative;
+    color: #087f4f;
 
-    z-index: 2;
-
-    color: #e8a32e;
-
-    font-size: 13px;
+    font-size: 10px;
 
     font-style: italic;
 }
 
 
 /* =========================================
-   DESKTOP
+   MOBILE
 ========================================= */
 
-@media (min-width: 600px) {
+@media (max-width: 480px) {
 
-    body {
-        padding: 20px;
+    .hero {
+        height: 225px;
     }
 
 
-    .container {
-        min-height: auto;
+    .header-content {
+        padding-top: 65px;
+    }
 
-        margin:
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+
+    .subtitle {
+        font-size: 8px;
+    }
+
+
+    .welcome {
+        padding:
+            0
             20px
-            0;
+            18px;
+    }
 
-        border-radius: 25px;
+
+    .welcome h2 {
+        font-size: 25px;
+    }
+
+
+    .welcome p {
+        font-size: 12px;
+    }
+
+
+    .menu {
+        padding:
+            0
+            20px
+            20px;
+    }
+
+
+    .menu-card {
+        min-height: 78px;
+    }
+
+
+    .icon-box {
+        width: 78px;
+
+        min-width: 78px;
+
+        height: 78px;
+    }
+
+
+    .menu-info h3 {
+        font-size: 16px;
+    }
+
+
+    .menu-info p {
+        font-size: 9px;
+    }
+
+
+    .arrow {
+        font-size: 28px;
+
+        padding-right: 10px;
+    }
+
+
+    .leaf-decoration {
+        left: 15px;
+
+        bottom: 40px;
+
+        font-size: 32px;
+    }
+
+
+    .shield-decoration {
+        right: 18px;
+
+        bottom: 40px;
+
+        width: 38px;
+        height: 46px;
+
+        font-size: 18px;
     }
 }
