@@ -8,14 +8,36 @@
     box-sizing: border-box;
 }
 
+
+/* =========================================
+   HTML
+========================================= */
+
 html {
-    scroll-behavior: smooth;
+    width: 100%;
+    min-height: 100%;
 }
 
+
+/* =========================================
+   BODY
+========================================= */
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6f5;
-    color: #202a2e;
+    width: 100%;
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    display: flex;
+    justify-content: center;
+
+    background: #f4f3ef;
+
+    overflow-x: hidden;
 }
 
 
@@ -25,14 +47,16 @@ body {
 
 .container {
     width: 100%;
-    max-width: 500px;
-    min-height: 100vh;
+    max-width: 430px;
 
-    margin: 0 auto;
+    min-height: 100vh;
 
     background: #ffffff;
 
     overflow: hidden;
+
+    box-shadow:
+        0 0 35px rgba(0, 0, 0, 0.10);
 }
 
 
@@ -43,148 +67,59 @@ body {
 .hero {
     position: relative;
 
-    height: 215px;
+    height: 275px;
 
-    padding-top: 18px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-top: 35px;
 
     text-align: center;
+
+    color: #ffffff;
 
     overflow: hidden;
 
     background:
-        radial-gradient(
-            circle,
-            #dce9df 3px,
-            transparent 3.5px
+        linear-gradient(
+            135deg,
+            #a93f16 0%,
+            #b94d1b 50%,
+            #87330f 100%
         );
-
-    background-size: 28px 28px;
 }
 
 
-/* =========================================
-   DOTS
-========================================= */
+.hero::before {
+    content: "";
 
-.dots {
     position: absolute;
 
-    width: 90px;
-    height: 90px;
+    width: 220px;
+    height: 220px;
 
-    opacity: 0.65;
+    border-radius: 50%;
 
-    background-image:
-        radial-gradient(
-            #d8e6db 3px,
-            transparent 3.5px
-        );
+    top: -140px;
+    left: -70px;
 
-    background-size: 22px 22px;
-}
-
-.dots-left {
-    left: 0;
-    top: 0;
-}
-
-.dots-right {
-    right: 0;
-    top: 45px;
+    background:
+        rgba(255,255,255,0.035);
 }
 
 
-/* =========================================
-   LEAF
-========================================= */
+.hero::after {
+    content: "";
 
-.leaf-decoration {
     position: absolute;
 
-    left: -25px;
-    bottom: -10px;
+    width: 280px;
+    height: 280px;
 
-    width: 100px;
-    height: 90px;
+    border-radius: 50%;
 
-    opacity: 0.18;
-}
+    right: -120px;
+    bottom: -220px;
 
-.leaf-decoration span {
-    position: absolute;
-
-    width: 38px;
-    height: 70px;
-
-    border-radius: 100% 0 100% 0;
-
-    background: #79b783;
-}
-
-.leaf-decoration span:nth-child(1) {
-    left: 35px;
-    bottom: 0;
-
-    transform: rotate(-25deg);
-}
-
-.leaf-decoration span:nth-child(2) {
-    left: 55px;
-    bottom: 20px;
-
-    transform: rotate(30deg) scale(.75);
-}
-
-.leaf-decoration span:nth-child(3) {
-    left: 10px;
-    bottom: 25px;
-
-    transform: rotate(-55deg) scale(.65);
-}
-
-
-/* =========================================
-   SHIELD
-========================================= */
-
-.shield-decoration {
-    position: absolute;
-
-    right: 20px;
-    bottom: 45px;
-
-    width: 48px;
-    height: 58px;
-
-    opacity: 0.15;
-
-    border: 4px solid #79b783;
-
-    clip-path:
-        polygon(
-            50% 0,
-            100% 18%,
-            90% 72%,
-            50% 100%,
-            10% 72%,
-            0 18%
-        );
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.shield-decoration span {
-    color: #79b783;
-
-    font-size: 25px;
-
-    font-weight: 800;
+    background:
+        rgba(255,255,255,0.035);
 }
 
 
@@ -194,42 +129,64 @@ body {
 
 .logo {
     position: relative;
-    z-index: 2;
 
-    width: 68px;
-    height: 68px;
+    z-index: 3;
 
-    margin-top: 3px;
+    height: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
 }
 
-.logo svg {
-    width: 100%;
-    height: 100%;
 
-    display: block;
+.logo-leaf {
+    position: absolute;
+
+    width: 36px;
+    height: 21px;
+
+    border: 3px solid #ffffff;
+
+    border-left: none;
+    border-bottom: none;
+
+    border-radius:
+        100% 0 100% 0;
+
+    transform:
+        rotate(-35deg)
+        translate(-13px, -17px);
+}
+
+
+.logo-leaf.right {
+    transform:
+        rotate(35deg)
+        translate(13px, -17px);
 }
 
 
 /* =========================================
-   EHS
+   EHS TITLE
 ========================================= */
 
 .hero h1 {
     position: relative;
-    z-index: 2;
 
-    color: #087443;
+    z-index: 3;
 
-    font-size: 43px;
+    font-size: 72px;
 
     line-height: 1;
 
-    font-weight: 800;
+    font-weight: 900;
 
-    letter-spacing: 1px;
+    letter-spacing: 3px;
 
-    margin-top: 2px;
-    margin-bottom: 3px;
+    color: #ffffff;
 }
 
 
@@ -239,26 +196,95 @@ body {
 
 .subtitle {
     position: relative;
-    z-index: 2;
 
-    display: flex;
+    z-index: 3;
 
-    align-items: center;
-    justify-content: center;
+    margin-top: 17px;
 
-    gap: 5px;
-
-    color: #087443;
-
-    font-size: 7px;
+    font-size: 10px;
 
     font-weight: 700;
 
-    letter-spacing: .4px;
+    letter-spacing: 0.8px;
 }
 
+
 .subtitle b {
-    font-size: 6px;
+    color: #e6a02e;
+
+    margin:
+        0 4px;
+}
+
+
+/* =========================================
+   HEADER DECORATION
+========================================= */
+
+.leaf-decoration {
+    position: absolute;
+
+    left: 15px;
+    bottom: 35px;
+
+    font-size: 50px;
+
+    color:
+        rgba(
+            236,
+            161,
+            90,
+            0.30
+        );
+
+    transform:
+        rotate(-25deg);
+
+    z-index: 2;
+}
+
+
+.shield-decoration {
+    position: absolute;
+
+    right: 22px;
+    top: 90px;
+
+    width: 50px;
+    height: 62px;
+
+    border:
+        3px solid
+        rgba(
+            240,
+            160,
+            90,
+            0.30
+        );
+
+    border-radius:
+        45%
+        45%
+        50%
+        50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 27px;
+
+    color:
+        rgba(
+            240,
+            160,
+            90,
+            0.40
+        );
+
+    z-index: 2;
 }
 
 
@@ -267,59 +293,125 @@ body {
 ========================================= */
 
 .welcome {
+    position: relative;
+
     text-align: center;
 
-    padding: 20px 25px 18px;
+    padding:
+        42px
+        20px
+        15px;
 }
 
+
+.welcome::before {
+    content: "";
+
+    position: absolute;
+
+    top: -25px;
+
+    left: -5%;
+
+    width: 110%;
+
+    height: 50px;
+
+    background: #ffffff;
+
+    border-radius:
+        50%
+        50%
+        0
+        0;
+}
+
+
 .welcome h2 {
-    color: #087443;
+    position: relative;
 
-    font-size: 22px;
+    font-size: 27px;
 
-    line-height: 1.1;
+    color: #2a211d;
 
     font-weight: 800;
+
+    letter-spacing: 0.3px;
 }
 
 
 /* =========================================
-   SAP
+   DIVIDER
 ========================================= */
 
 .divider {
-    width: 100%;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin:
+        14px
+        0
+        18px;
+}
+
+
+.divider > span {
+    width: 65px;
+
+    height: 2px;
+
+    background: #d87832;
+}
+
+
+/* =========================================
+   HAZARD DIVIDER ICON
+========================================= */
+
+.hazard-divider-icon {
+    position: relative;
+
+    width: 32px;
+    height: 29px;
 
     display: flex;
 
-    align-items: center;
     justify-content: center;
 
-    gap: 7px;
+    align-items: center;
 
-    margin: 9px auto 13px;
+    color: #c51d17;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    z-index: 1;
 }
 
-.divider span {
-    flex: 1;
 
-    height: 1px;
+.hazard-divider-icon::before {
+    content: "";
 
-    background: #087443;
-}
+    position: absolute;
 
-.divider strong {
-    color: #087443;
+    width: 23px;
+    height: 23px;
 
-    font-size: 7px;
+    border:
+        3px solid #c51d17;
 
-    line-height: 1.25;
+    border-radius: 5px;
 
-    font-weight: 700;
+    transform:
+        rotate(45deg);
 
-    text-align: center;
-
-    white-space: nowrap;
+    z-index: -1;
 }
 
 
@@ -328,23 +420,32 @@ body {
 ========================================= */
 
 .welcome p {
-    color: #303936;
+    color: #252525;
 
-    font-size: 9px;
+    font-size: 15px;
 
-    line-height: 1.45;
+    line-height: 1.5;
 }
+
 
 .red-text {
-    color: #d62828;
+    color: #c51d17;
+
+    font-weight: 700;
 }
+
 
 .orange-text {
-    color: #ef8b00;
+    color: #d77917;
+
+    font-weight: 700;
 }
 
+
 .green-text {
-    color: #087443;
+    color: #34703d;
+
+    font-weight: 700;
 }
 
 
@@ -353,62 +454,70 @@ body {
 ========================================= */
 
 .menu {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 7px;
-
-    padding: 0 25px 27px;
+    padding:
+        5px
+        18px
+        20px;
 }
 
 
 /* =========================================
-   CARD
+   MENU CARD
 ========================================= */
 
 .menu-card {
-    position: relative;
-
     display: flex;
 
     align-items: center;
 
     width: 100%;
 
-    height: 72px;
+    min-height: 105px;
+
+    margin:
+        14px 0;
 
     background: #ffffff;
 
-    border: 1px solid #e5e7eb;
-
-    border-radius: 11px;
+    border-radius: 16px;
 
     overflow: hidden;
 
     text-decoration: none;
 
-    color: inherit;
-
     box-shadow:
-        0 3px 9px rgba(0, 0, 0, .07);
+        0 5px 16px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 
-/* =========================================
-   LEFT COLOR
-========================================= */
+.menu-card:hover {
+    transform:
+        translateY(-3px);
 
-.menu-card::before {
-    content: "";
+    box-shadow:
+        0 10px 22px
+        rgba(
+            0,
+            0,
+            0,
+            0.12
+        );
+}
 
-    position: absolute;
 
-    left: 0;
-    top: 0;
-    bottom: 0;
-
-    width: 4px;
+.menu-card:active {
+    transform:
+        scale(0.98);
 }
 
 
@@ -417,245 +526,454 @@ body {
 ========================================= */
 
 .icon-box {
-    width: 70px;
-    min-width: 70px;
+    width: 90px;
 
-    height: 72px;
+    min-width: 90px;
+
+    height: 105px;
 
     display: flex;
 
-    align-items: center;
     justify-content: center;
 
-    margin-left: 4px;
+    align-items: center;
+
+    color: #ffffff;
 }
 
 
 /* =========================================
-   HAZARD
+   HAZARD - RED
 ========================================= */
 
-.hazard::before {
-    background: #d62828;
-}
-
 .hazard .icon-box {
-    background: #d62828;
-}
-
-.hazard-icon {
-    width: 38px;
-    height: 34px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    color: #ffffff;
-
-    font-size: 25px;
-
-    font-weight: 900;
-
-    clip-path:
-        polygon(
-            50% 0,
-            100% 92%,
-            0 92%
+    background:
+        linear-gradient(
+            145deg,
+            #d62218,
+            #a9140f
         );
 }
 
 
+.hazard .menu-info h3,
+.hazard .arrow {
+    color: #c51d17;
+}
+
+
 /* =========================================
-   IUT
+   IUT - ORANGE
 ========================================= */
 
-.iut::before {
-    background: #2da55a;
+.iut .icon-box {
+    background:
+        linear-gradient(
+            145deg,
+            #d87817,
+            #bd5b0f
+        );
 }
 
-.iut .icon-box {
-    background: #2da55a;
+
+.iut .menu-info h3,
+.iut .arrow {
+    color: #d77817;
 }
+
+
+/* =========================================
+   IPMAN - DARK BLUE
+========================================= */
+
+.ipman .icon-box {
+    background:
+        linear-gradient(
+            145deg,
+            #31577b,
+            #203e5a
+        );
+}
+
+
+.ipman .menu-info h3,
+.ipman .arrow {
+    color: #31577b;
+}
+
+
+/* =========================================
+   P2H - BLUE
+========================================= */
+
+.p2h .icon-box {
+    background:
+        linear-gradient(
+            145deg,
+            #3979a3,
+            #275a7d
+        );
+}
+
+
+.p2h .menu-info h3,
+.p2h .arrow {
+    color: #316d93;
+}
+
+
+/* =========================================
+   OTT - GREEN
+========================================= */
+
+.ott .icon-box {
+    background:
+        linear-gradient(
+            145deg,
+            #34713a,
+            #24572c
+        );
+}
+
+
+.ott .menu-info h3,
+.ott .arrow {
+    color: #286335;
+}
+
+
+/* =========================================
+   HAZARD ICON
+========================================= */
+
+.hazard-icon {
+    width: 45px;
+    height: 40px;
+
+    border:
+        4px solid #ffffff;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 28px;
+
+    font-weight: 900;
+
+    transform:
+        rotate(45deg);
+}
+
+
+/* =========================================
+   IUT ICON
+========================================= */
 
 .clipboard-icon {
-    position: relative;
+    width: 45px;
 
-    width: 30px;
-    height: 38px;
+    padding: 8px;
+
+    border:
+        3px solid #ffffff;
+
+    border-radius: 6px;
 
     display: flex;
 
     flex-direction: column;
 
-    justify-content: center;
+    gap: 1px;
 
-    gap: 0;
+    font-size: 10px;
 
-    padding: 5px;
+    line-height: 10px;
 
-    border: 2px solid #ffffff;
+    font-weight: 900;
 
-    border-radius: 3px;
-
-    color: #ffffff;
-
-    font-size: 8px;
-
-    font-weight: 800;
+    position: relative;
 }
+
 
 .clipboard-icon::before {
     content: "";
 
     position: absolute;
 
-    top: -5px;
-    left: 7px;
+    top: -9px;
+    left: 13px;
 
-    width: 13px;
-    height: 6px;
+    width: 17px;
+    height: 8px;
 
-    border: 2px solid #ffffff;
+    border:
+        3px solid #ffffff;
 
-    border-bottom: 0;
+    border-bottom: none;
 
-    border-radius: 4px 4px 0 0;
+    border-radius:
+        5px
+        5px
+        0
+        0;
 }
 
 
 /* =========================================
-   OTT
+   IPMAN ICON
 ========================================= */
 
-.ott::before {
-    background: #f29a00;
+.ipman-icon {
+    position: relative;
+
+    width: 53px;
+    height: 58px;
+
+    border:
+        3px solid #ffffff;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
 }
 
-.ott .icon-box {
-    background: #f29a00;
+
+/* Person */
+
+.ipman-person {
+    position: relative;
+
+    width: 16px;
+    height: 16px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    margin-top: -17px;
 }
+
+
+.ipman-person::after {
+    content: "";
+
+    position: absolute;
+
+    width: 28px;
+    height: 18px;
+
+    left: -6px;
+    top: 19px;
+
+    background: #ffffff;
+
+    border-radius:
+        15px
+        15px
+        5px
+        5px;
+}
+
+
+/* Check */
+
+.ipman-check {
+    position: absolute;
+
+    right: -9px;
+    bottom: -8px;
+
+    width: 25px;
+    height: 25px;
+
+    background: #31577b;
+
+    border:
+        3px solid #ffffff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 14px;
+
+    font-weight: 900;
+}
+
+
+/* =========================================
+   P2H ICON
+========================================= */
+
+.p2h-icon {
+    position: relative;
+
+    width: 48px;
+    height: 58px;
+
+    border:
+        3px solid #ffffff;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.p2h-icon::before {
+    content: "";
+
+    position: absolute;
+
+    top: -8px;
+
+    width: 20px;
+    height: 7px;
+
+    border:
+        3px solid #ffffff;
+
+    border-bottom: none;
+
+    border-radius:
+        5px
+        5px
+        0
+        0;
+}
+
+
+.p2h-icon span {
+    color: #ffffff;
+
+    font-size: 30px;
+
+    font-weight: 900;
+}
+
+
+/* =========================================
+   OTT ICON
+========================================= */
 
 .document-icon {
     position: relative;
 
-    width: 31px;
-    height: 39px;
+    width: 45px;
+    height: 55px;
 
-    border: 2px solid #ffffff;
+    border:
+        3px solid #ffffff;
 
-    border-radius: 3px;
+    border-radius: 4px;
+
+    overflow: hidden;
 }
+
 
 .document-line {
     position: absolute;
 
-    left: 5px;
+    left: 7px;
 
-    width: 17px;
-
-    height: 2px;
+    height: 3px;
 
     background: #ffffff;
+
+    border-radius: 5px;
 }
+
 
 .line-1 {
-    top: 9px;
+    top: 12px;
+
+    width: 25px;
 }
+
 
 .line-2 {
-    top: 16px;
+    top: 22px;
+
+    width: 20px;
 }
 
+
 .line-3 {
-    top: 23px;
+    top: 32px;
+
+    width: 16px;
 }
+
 
 .pen {
     position: absolute;
 
-    right: -7px;
-    bottom: -6px;
+    width: 8px;
+    height: 30px;
 
-    width: 5px;
-    height: 21px;
+    right: 3px;
+    bottom: -2px;
 
     background: #ffffff;
 
-    border-radius: 2px;
+    transform:
+        rotate(40deg);
 
-    transform: rotate(42deg);
+    border-radius: 3px;
 }
 
 
 /* =========================================
-   IP MAN
-========================================= */
-
-.ip-man::before {
-    background: #1976c9;
-}
-
-.ip-man .icon-box {
-    background: #1976c9;
-}
-
-.ip-man-icon {
-    width: 39px;
-    height: 39px;
-
-    display: block;
-}
-
-
-/* =========================================
-   MENU INFO
+   MENU INFORMATION
 ========================================= */
 
 .menu-info {
     flex: 1;
 
-    padding: 5px 8px;
+    padding:
+        12px
+        8px
+        12px
+        16px;
+
+    border-left:
+        2px solid
+        currentColor;
 }
+
 
 .menu-info h3 {
-    margin-bottom: 3px;
-
-    font-size: 13px;
-
-    line-height: 1;
+    font-size: 20px;
 
     font-weight: 800;
+
+    margin-bottom: 4px;
 }
+
 
 .menu-info p {
-    color: #303936;
+    font-size: 12px;
 
-    font-size: 7px;
+    line-height: 1.35;
 
-    line-height: 1.3;
-}
-
-
-/* =========================================
-   COLORS
-========================================= */
-
-.hazard .menu-info h3 {
-    color: #d62828;
-}
-
-.iut .menu-info h3 {
-    color: #23934d;
-}
-
-.ott .menu-info h3 {
-    color: #ef8b00;
-}
-
-.ip-man .menu-info h3 {
-    color: #1976c9;
+    color: #292929;
 }
 
 
@@ -664,11 +982,11 @@ body {
 ========================================= */
 
 .arrow {
-    padding-right: 10px;
+    font-size: 38px;
 
-    color: #087443;
+    line-height: 1;
 
-    font-size: 27px;
+    margin-right: 12px;
 
     font-weight: 300;
 }
@@ -679,97 +997,170 @@ body {
 ========================================= */
 
 footer {
+    position: relative;
+
+    padding:
+        32px
+        15px
+        25px;
+
     text-align: center;
 
-    padding: 10px 25px 17px;
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #a94617,
+            #81300e
+        );
+
+    overflow: hidden;
+}
+
+
+footer::before {
+    content: "";
+
+    position: absolute;
+
+    top: -25px;
+
+    left: -5%;
+
+    width: 110%;
+
+    height: 50px;
 
     background: #ffffff;
+
+    border-radius:
+        50%
+        50%
+        0
+        0;
 }
+
+
+/* =========================================
+   FOOTER DECORATION
+========================================= */
 
 .footer-decoration {
+    position: relative;
+
+    z-index: 2;
+
     display: flex;
 
-    align-items: center;
     justify-content: center;
 
-    gap: 8px;
+    align-items: center;
 
-    margin-bottom: 8px;
+    gap: 12px;
+
+    margin-bottom: 10px;
 }
 
-.footer-decoration > span {
-    width: 45px;
 
-    height: 1px;
+.footer-decoration span {
+    width: 55px;
 
-    background: #087443;
+    height: 2px;
+
+    background: #f0a42f;
 }
+
 
 .shield {
-    width: 23px;
-    height: 27px;
+    width: 32px;
+    height: 37px;
+
+    border:
+        2px solid #ffffff;
+
+    border-radius:
+        45%
+        45%
+        50%
+        50%;
 
     display: flex;
 
-    align-items: center;
     justify-content: center;
 
-    color: #087443;
+    align-items: center;
 
-    font-size: 14px;
-
-    font-weight: 800;
-
-    border: 2px solid #087443;
-
-    clip-path:
-        polygon(
-            50% 0,
-            100% 18%,
-            90% 73%,
-            50% 100%,
-            10% 73%,
-            0 18%
-        );
+    font-size: 17px;
 }
+
+
+/* =========================================
+   FOOTER TEXT
+========================================= */
 
 footer h4 {
-    color: #087443;
+    position: relative;
 
-    font-size: 10px;
+    z-index: 2;
 
-    font-weight: 800;
+    font-size: 13px;
 
-    margin-bottom: 5px;
+    letter-spacing: 0.3px;
+
+    margin-bottom: 6px;
 }
+
 
 .footer-line {
-    width: 75%;
+    position: relative;
 
-    height: 1px;
+    z-index: 2;
 
-    margin: 0 auto 6px;
+    width: 35px;
 
-    border-top: 1px dashed #087443;
+    height: 2px;
+
+    margin:
+        0
+        auto
+        7px;
+
+    background: #e4a12b;
 }
 
-footer p {
-    color: #087443;
 
-    font-size: 8px;
+footer p {
+    position: relative;
+
+    z-index: 2;
+
+    color: #e8a32e;
+
+    font-size: 13px;
 
     font-style: italic;
 }
 
 
 /* =========================================
-   LARGER SCREEN
-   Tetap menggunakan desain sempit
+   DESKTOP
 ========================================= */
 
-@media (min-width: 501px) {
+@media (min-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
 
     .container {
-        max-width: 500px;
+        min-height: auto;
+
+        margin:
+            20px
+            0;
+
+        border-radius: 25px;
     }
 }
